@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+Semester assginment
+ Review Assignment
+
+Homevago project
+ Author:
+ Date:
+
+ Filename: Home.html
+-->
+
+<head>
+    <title>About Us</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/user.js"></script>
+    
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/about.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+
+
+</head>
+<body>
+
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+            <div class="upper_part_header">
+                <div class="left">
+                    <a href="Home.html">
+                        <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="right" id="header_user_right_icon">
+                    <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                    <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+                </div>
+                <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                    <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                    <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                    <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                    <script> write_setting_li(false); </script>
+                </ul>
+            </nav>
+            <script> re_right(); </script>
+        </header>
+    
+    
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    
+    <div class="bg_image">
+        <div class="about_container">
+            <div class="title_about">
+                <h1 style="font-size: 80px">
+                    <!--The main title of the about-->
+                    About Us
+                </h1>
+                <h2>
+                        Who we are
+                    <!--The sub title of the about-->
+                </h2>
+                <blockquote>
+                    We are a diverse team of over 1,200+ entrepreneurs, equipped with both the tech and the passion to help our users find their ideal hotel, in 55 global regions and 33 different languages.
+                </blockquote>
+            </div>
+            <div class="right_about">
+                <div class="about_content">
+                    <blockquote>
+                        <h1>Human Learners</h1>
+                        <p>The secret behind homevago's atypical success is not only attributed to our focus on machine learning and artificial intelligence, but also to a company culture built on human learning and emotional intelligence. This balance continues to attract the best talents from every corner of the globe.</p>
+                    </blockquote>
+                </div>
+                <div class="image_box">
+                    <img src="../Image/about us/human_learning.png" alt="Human Learning" height="190" width="300"/>
+                </div>
+            </div>
+            <div class="left_about">
+                <div class="image_box" float="right">
+                    <img src="../Image/about us/our_culture.png" alt="Our Culture" height="190" width="190" style="margin-left: 100px"/>
+                </div>
+                <div class="about_content">
+                    <blockquote>
+                    <h1>Our Culture</h1>
+                    <p>At homevago, we don’t just embrace change, we make change. In such a rapidly evolving technological environment, we know that our competitive advantage is the speed of our learning. We believe our entrepreneurial vision, modern organizational structure and self-determined working hours keep our talents happy, motivated, productive and looking forward to coming to work each morning.</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="right_about">
+                <div class="about_content">
+                    <blockquote>
+                        <h1>Our Search</h1>
+                        <p>Anyone can access homevago’s fast and intuitive search, comparing over 1.8 million hotels from 180+ Online Travel Agents worldwide. Our hotel information, pictures, ratings, reviews, filters and other features are all available to help our users find their ideal hotel.</p>
+                    </blockquote>
+                </div>
+                <div class="image_box">
+                        <img src="../Image/about us/our_search.jpg" alt="Our Search" height="180" width="300"/>
+                </div>
+            </div>
+            <div class="left_about">
+                <div class="image_box" float="right">
+                    <iframe width="420" height="245" src="https://www.youtube.com/embed/IDUK7WinCdg?autoplay=1" alt="Our Marketing"></iframe>
+                </div>
+                <div class="about_content">
+                    <blockquote>
+                    <h1>Our Marketing</h1>
+                    <p>Over 50% of our traffic comes from branded sources. We believe that building and maintaining the homevago brand will contribute to long-term success with loyal users and advertisers. We use our own tools and processes to measure and improve our performance from start to finish, whether it be pre-testing a creative or optimizing spend.</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="right_about">
+                <div class="about_content">
+                    <blockquote>
+                        <h1>Our Location</h1>
+                        <p>Since homevago began, our Headquarters have been in Düsseldorf, Germany. We recently moved into our brand new campus in the city's Media Harbour, so that's not changing anytime soon! We've also established a number of innovation centers across Europe, to scale our recruiting and give us more capacity to attract the best tech talents.</p>
+                    </blockquote>
+                </div>
+                <div class="image_box">
+                        <img src="../Image/about us/our_location.jpg" alt="Our Location" height="180" width="300"/>
+                </div>
+            </div>
+            <div class="left_about">
+                <div class="image_box" float="right">
+                    <iframe width="420" height="245" src="https://www.youtube.com/embed/R8O_cduQoso?autoplay=1" alt="Düsseldorf, Germany"></iframe>
+                </div>
+                <div class="about_content">
+                    <blockquote>
+                    <h1>Düsseldorf, Germany</h1>
+                    <p>Düsseldorf is consistently voted in the top 10 most livable cities in the world and is known as the art capital of West Germany, with over 100 galleries, 26 museums and cutting-edge architecture. The city also boasts a rapidly growing tech and startup scene. Our brand new campus in the city’s thriving Media Harbour is currently home to 1200+ talents, but has the potential to host up to 3000!</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+
+
+
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

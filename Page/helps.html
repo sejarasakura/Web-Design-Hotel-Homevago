@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+Semester assginment
+ Review Assignment
+
+ Homevago project
+ Author:
+ Date:
+
+ Filename: Home.html
+-->
+
+<head>
+    <title>Helps</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+    
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/show_script.js"></script>
+    <script src="../script/user.js"></script>
+
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/show_style.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/helps.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood">
+
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(false); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <main>
+        <div class="triangle">
+        
+        </div>
+        <div class="helps">
+            <ol>
+                <li>
+                    <a href="contact_us.html" title="Contact Us">Contact Us</a> <a href="#frist" onclick="set_display('helps_id_container', 'frist');" title="Know more">know more</a>
+                </li>
+                <li><a href="#second" onclick="set_display('helps_id_container', 'second');" title="Contact Us">How to online purchase?</li>
+                <li><a href="#third" onclick="set_display('helps_id_container', 'third');" title="Policy and terms">Policy and Terms?</li>
+                <li><a href="#four" onclick="set_display('helps_id_container', 'four');" title="Service charge">Fee and Payment?</li>
+                <li><a href="#five" onclick="set_display('helps_id_container', 'five');" title="How to be a host?">How to be a host?</li></a>
+            </ol>
+        </div>
+        <div class="null_space">
+        </div>
+        <!---------------------------------------------------------------------------------------------->
+        
+        <div id="frist" class="helps_id_container">
+                <div class="know_about_us_div">
+                    <div class="know_about_us_div_top">
+                        <div class="know_about_us">
+                            </br></br>
+                            <h2>Know more about us</h2>
+                            <h3>Facebook        :<a href="https://www.facebook.com/najibrazak/"> Homevago@facebook.com</a></h3>
+                            <h3>Email           :servicehomevago@yahoo.com</h3>
+                            <h3>Official Website: www.homevago.com</h3>
+                            <h3>Phone           : (011)-000-0000</h3>
+                        </div>
+                        <div class="subscribe_us">
+                            </br></br>
+                            <h3><em>Subcribe Us!</em></h3>
+                            <h3>To check up the coming events!</h3>
+                            <h3>To give further suggestion!</h3>
+                            <h3>Problems? Let us know!</h3>
+                            <h3>Call us!</h3>
+                        </div>
+                    </div>
+                    <div class="know_about_us_div_top">
+                        <div class="address_div">
+                            <div class="address">
+                                <br />
+                                <br />
+                                <br />
+                                <h3>53300 setapak, Kuala Lumpur</h3>
+                                <h3>Malaysia</h3>
+                            </div>
+                            <div class="helps_findus">
+                                <div class="button_container">
+                                    <button class="imbutton">Find Us</button>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            
+        </div>
+        
+        <div id="second" class="helps_id_container">
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <div style="width: 256px;height: 234.75px; margin: 23.625px auto!important;">
+                        <img src="../Image/helps/travel.png" title="travel relax" alt="travel relax">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="498.40000000000003" height="280" type="text/html" src="https://www.youtube.com/embed/Mu0yftdkJvM?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=1&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+                </div>
+            </div>
+            
+            <div class="dropdownlist">
+                <div class="dropdownlist_onepart">
+                    <div class="dropdown_upper row" onclick="display_lower('2', '1')">
+                        <div class="col-sm-1">
+                            <div class="next_holder" style="width:30px; height: 30px">
+                                <span class="icon-next"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                                How do I book a place on Airbnb?
+                        </div>
+                    </div>
+                    <div class="dropdown_lower-2 row" id="id-2-1">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="container_detial_dropdown">
+                                    <blockquote>
+                                        <p>When you book a place on Airbnb, you’re making arrangements to stay in someone’s home. Each host has their own style of hospitality, starting with how they like to get to know their guests. Some hosts want to approve reservations, while others are comfortable letting you book their place instantly without waiting for approval.</p>
+                                        <ol class="corecrt_correct_list">
+                                            <li>Complete Your Profile</li>
+                                            <li>Find the Right Place</li>
+                                            <li>Book It!
+                                                <ul class="corecrt_correct_list">
+                                                    <li>
+                                                            Instant Book
+                                                    </li>
+                                                    <li>Request to Book</li>
+                                                    <li>Pre-approvals and Special Offers</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            
+                <div class="dropdownlist_onepart">
+                    <div class="dropdown_upper row" onclick="display_lower('2', '2')">
+                        <div class="col-sm-1">
+                            <div class="next_holder" style="width:30px; height: 30px">
+                                <span class="icon-next"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            What are experiences?
+                        </div>
+                    </div>
+                    <div class="dropdown_lower-2 row" id="id-2-2">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="container_detial_dropdown">
+                                    <blockquote>
+                                            Airbnb experiences are activities designed and led by inspiring locals. They go beyond typical tours or classes by immersing guests in a host’s unique world.
+                                    </blockquote>
+                                    <blockquote>
+                                        <h3>For hosts</h3>
+                                        You do not need to host your home on Airbnb in order to host an experience. Experiences are an opportunity for anyone to share their hobbies, skills, or expertise with the world, without needing an extra room.
+                                    </blockquote>
+                                    <blockquote>
+                                        <h3>For guests</h3>
+                                        <p>You do not need to stay in a home on Airbnb in order to book an experience.</p>
+                                        <p>Experiences last a few hours on average. They can range from workshops to long treks, and are available for various skill levels and interests. All experiences are reviewed by Airbnb to make sure they meet our experience quality standards.</p>
+                                        <p>If you’d like to reserve your spot on an experience, learn how to book an experience. You can also learn how to host an experience.</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+            
+                <div class="dropdownlist_onepart">
+                    <div class="dropdown_upper row" onclick="display_lower('2', '3')">
+                        <div class="col-sm-1">
+                            <div class="next_holder" style="width:30px; height: 30px">
+                                <span class="icon-next"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                                What legal and regulatory issues?
+                        </div>
+                    </div>
+                    <div class="dropdown_lower-2 row" id="id-2-3">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="container_detial_dropdown">
+                                    <blockquote>
+                                            To ensure a listing has what you’ll need for kids, you can always message the host directly with questions before you book.
+                                        <br>
+                                        Safe Kids Worldwide, a global organization dedicated to preventing child injuries, provides an array of resources on child safety on its website.
+                                        <br>
+                                        This includes a series of simple tips on how to make a home safer for children. Below is a full list of the various home risks Safe Kids Worldwide identifies:
+                                        <br>
+                                        
+                                        <ul class="corecrt_correct_list">
+                                            <li>Batteries</li>
+                                            <li>Burns and Scalds</li>
+                                            <li>Carbon Monoxide</li>
+                                            <li>Choking and Strangulation</li>
+                                            <li>Falls</li>
+                                            <li>Liquid Laundry Packets</li>
+                                            <li>Medication</li>
+                                            <li>Poison</li>
+                                            <li>Sleep Safety and Suffocation</li>
+                                            <li>Toy Safety</li>
+                                            <li>TV and Furniture Tip-Overs</li>
+                                            <li>Water and Drowning</li>
+                                        </ul>
+
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    
+            </div>
+        </div>
+        
+        <div id="third" class="helps_id_container">
+            <blockquote>
+                <h2>Terms & policies</h2>
+                <p>These terms, policies and standards apply to your access to and use of the Airbnb Platform in addition to our Terms of Service and Payments Terms of Service.</p>
+            </blockquote>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div style="height: 170px; width: 170px; margin: 10px auto!important;">
+                        <img src="../Image/helps/policy.png" alt="Content Policy" title="Content Policy">
+                    </div>
+                    <blockquote>
+                        <h3>What is Airbnb's Content Policy?</h3>
+                        <p>By posting content in public areas on Airbnb, you agree to abide by these guidelines and all other Airbnb policies. We reserve the right to remove any content, in whole or part, that violates these guidelines, our Terms of Service, our Community Standards, or for any other reason at our sole discretion.</p>
+                        <p>In the event of repeated or severe violations, we may suspend or permanently deactivate the account(s) in question.</p>
+                        <p>You can report the content directly or contact us to report content that appears to violate these guidelines.</p>
+                        <p>The following content is never allowed on Airbnb:</p>
+                        <ul class="corecrt_correct_list">
+                            <li>Content created solely for the purpose of advertising or other commercial content, including company logos, links, or company names</li>
+                            <li>Spam, unwanted contact, or content that is shared repeatedly in a disruptive manner</li>
+                            <li>Content that endorses or promotes illegal or harmful activity, or that is profane, vulgar, obscene, threatening, or harassing</li>
+                            <li>Content that is discriminatory (review our Nondiscrimination Policy for more info)</li>
+                            <li>Attempts to impersonate another person, account, or entity, including a representative of Airbnb</li>
+                            <li>Content that is illegal or that violates another person’s or entity’s rights, including intellectual property rights and privacy rights</li>
+                            <li>Content that provides specific details or outcomes of an Airbnb investigation</li>
+                            <li>Content that is sufficient to identify a listing’s location or other content that may pose a personal safety risk to an Airbnb community member</li>
+                        </ul>
+                    </blockquote>
+                </div>
+                <div class="col-sm-4">
+                    <div style="height: 170px; width: 350px; margin: 10px auto!important;">
+                            <img src="../Image/helps/e_policy.png" alt="Extortion Policy" title="Extortion Policy">
+                    </div>
+                    <blockquote>
+                        <h3>What is Airbnb's Extortion Policy?</h3>
+                        <p>Reviews are a way for Airbnb guests and hosts to share their experiences with the community. Any attempt to use reviews or review responses to force a user to do something they aren’t obligated to do is a misuse of reviews, and we don’t allow it.</p>
+                        <p>This policy applies to situations including, but not limited to:</p>
+                        <ul class="corecrt_correct_list">
+                            <li>Guests threatening to use reviews or ratings in an attempt to force a host to provide refunds, additional compensation, or a reciprocal positive review.</li>
+                            <li>Hosts requiring a guest to leave a positive review or rating, or to revise a review in exchange for a partial or full refund, or reciprocal review. Hosts also can’t offer a free or discounted stay in exchange for a guest revising an existing review.</li>
+                            <li>Hosts asking a guest to take specific actions related to a review in exchange for a resolution to a dispute between the parties.</li>
+                        </ul>
+                        <ul class="corecrt_correct_list">
+                            <li>A guest from contacting a host with a problem prior to leaving a review.</li>
+                            <li>A host from asking a guest to leave an honest positive review or rating reflecting a positive experience.</li>
+                            <li>A host or guest from revising a review within the time constraints for revision.</li>
+                        </ul>
+                        <p>By posting a review, you agree to follow all Airbnb guidelines and policies, including the Extortion Policy, which Airbnb may enforce at our sole discretion. Failure to do so may result in the restriction, suspension or termination of your Airbnb account.</p>
+                    </blockquote>
+                </div>
+                <div class="col-sm-4">
+                    <div style="height: 170px; width: 244px; margin: 10px auto!important;">
+                            <img src="../Image/helps/terms_c.png" alt="Terms"  title="Terms">
+                    </div>
+                    <blockquote>
+                        <h3>Pay Less Upfront Terms</h3>
+                        <p>Last Updated: December 12, 2018</p>
+                        <p>By making a booking and choosing to pay less upfront (“Pay Less Upfront Feature” or “Feature”), you agree to these Pay Less Upfront Terms of Service (“Pay Less Upfront Terms”), which amend Airbnb’s Terms of Service (“Airbnb Terms”) and Payments Terms of Service (“Payments Terms”) and are effective as of the date when you first book and use the Pay Less Upfront Feature.</p>
+                        <p>All capitalized terms not defined have the meaning given to them in the Airbnb Terms and Payments Terms. If there is a conflict between the Airbnb Terms or Payments Terms and the Pay Less Upfront Terms, the Pay Less Upfront Terms control.</p>
+                        <p>The Pay Less Upfront Feature allows Guests to pay a portion of a booking’s Total Fees at the time of booking and pay the remainder of the Total Fees at a later time prior to check-in. The Pay Less Upfront Feature is available to Guests for eligible bookings when they pay with certain Payment Methods. If your booking is eligible for the Pay Less Upfront Feature, the Airbnb Site, Application or Services (collectively, the “Airbnb Platform”) will notify you during checkout.</p>
+                        <p>If you choose to book with the Pay Less Upfront Feature, the Airbnb Platform will notify you of the amount and schedule of each payment due. On the second payment due date, Airbnb Payments will automatically charge the original Payment Method you used to make the booking. Gift Cards and credits cannot be used for the second payment. Therefore, to the extent a gift card or credit is used for the initial booking using Pay Less Upfront, Airbnb will only charge the gift card or credit up to the first scheduled amount due.</p>
+                        <p>If you make a modification to a booking made with the Feature, you will be notified of the revised payment schedule, as applicable, via the Airbnb Platform. If the modification increases your Total Fees, you may be required to make an additional partial payment of the new Total Fees at the time of the modification.</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        
+        <div id="four" class="helps_id_container">
+            <div class="h1_container">
+                About service charge of homevago
+            </div>
+                
+            </h1>
+            <div class="__flex row">
+                <div class="col-sm-6">
+                    <blockquote class="text_five">
+                        <br>
+                        <h1>What is the Homevago service fee?</h1>
+                        <p>To help operate the Homevago platform, we charge a service fee to hosts and guests when a booking is confirmed.</p>
+                    </blockquote>
+                </div>
+                <div class="col-sm-6">
+                    <div class="table_five">
+                        <table class="five_table_container">
+                                <colgroup>
+                                    <col style="width: 40px; padding: 5px;" />
+                                    <col style="width: 120px; padding: 5px;" />
+                                    <col style="width: 100px;  padding: 5px;" />
+                                </colgroup>
+                            <thead>
+                            <tr>
+                                <td>days</td>
+                                <td>charge(member)</td>
+                                <td>charge(guess)</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2%</td>
+                                <td>4%</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>3%</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>4%</td>
+                                <td>6%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                    
+            <div class="dropdownlist">
+
+                    
+                <div class="dropdownlist_onepart">
+                        <div class="dropdown_upper row" onclick="display_lower('4', '1')">
+                            <div class="col-sm-1">
+                                <div class="next_holder" style="width:30px; height: 30px">
+                                    <span class="icon-next"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-11">
+                                Fees for home bookings
+                            </div>
+                        </div>
+                        <div class="dropdown_lower-4 row" id="id-4-1">
+                            <div class="row">
+                                <div class="col-sm-2">
+
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="container_detial_dropdown">
+                                        <blockquote>
+                                            <h2>Host service fees</h2>
+                                            The host service fee for homes is generally 3%, but may be higher for hosts in Italy or hosts who have a Super Strict cancellation policy. This fee is calculated from the booking subtotal (the nightly rate plus cleaning fee and additional guest fee, if applicable, but excluding Airbnb fees and taxes) and is automatically deducted from the payout to the host.
+                                            <br /><br>To review the service fee charged for a particular booking: <br><br>
+                                            <ol class="inner_list">
+                                                <li>Go to Transaction history on airbnb.com</li>
+                                                <li>Next to the reservation you want to review, click the reservation code</li>
+                                                <li>Under Payout, you'll see Airbnb Service Fee</li>
+                                            </ol>
+                                            <h2>Guest service fees</h2>
+                                            The guest service fee for homes ranges between 0% and 20% of the booking subtotal (the nightly rate plus cleaning fee and additional guest fee, if applicable, but excluding Airbnb fees and taxes) and is calculated using a variety of factors—these include the reservation subtotal, the length of the stay, and characteristics of the listing. In general, the service fee gets lower as the reservation cost gets higher. Guests see this fee on the checkout page before they book a reservation.
+                                            <br /><br>
+                                            If Airbnb is required to collect VAT, the service fee and VAT amounts will be combined on the checkout page, which could make the service fee appear to be higher than 20%.
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        
+                
+                    
+                <div class="dropdownlist_onepart">
+                        <div class="dropdown_upper row" onclick="display_lower('4', '2')">
+                            <div class="col-sm-1">
+                                <div class="next_holder" style="width:30px; height: 30px">
+                                    <span class="icon-next"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-11">
+                                    Fees for experiences
+                            </div>
+                        </div>
+                        <div class="dropdown_lower-4 row" id="id-4-2">
+                            <div class="row">
+                                <div class="col-sm-2">
+
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="container_detial_dropdown">
+                                        <blockquote>
+                                                <h2>Host service fees</h2>
+                                                We charge hosts who offer experiences a 20% service fee. This is calculated based on the price of the experience and is automatically deducted from the host’s payout. Hosts who participate in nonprofit partnerships for experiences have this fee waived.
+                                                
+                                               <h2>Guest service fees</h2>
+                                                We currently do not charge a guest service fee for experiences.
+
+                                                <h2>VAT charges on service fees</h2>
+                                                Depending on the laws of the jurisdiction involved, VAT may be charged on top of the host and guest service fee. The service fee will include these VAT charges when applicable.
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        
+
+                    
+                <div class="dropdownlist_onepart">
+                        <div class="dropdown_upper row" onclick="display_lower('4', '3')">
+                            <div class="col-sm-1">
+                                <div class="next_holder" style="width:30px; height: 30px">
+                                    <span class="icon-next"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-11">
+                                    Payment methods
+                            </div>
+                        </div>
+                        <div class="dropdown_lower-4 row" id="id-4-3">
+                            <div class="row">
+                                <div class="col-sm-2">
+
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="container_detial_dropdown">
+                                        <blockquote>
+                                                What methods of payment does Airbnb accept?
+                                                <div class="list-group_container">
+                                                    <div class="list-group">
+                                                        <ul>
+                                                            <a href="#id-4-3" class="list-group-item list_style_m" onclick="set_display('secondary_list', '4list-3-1')">Payment methods<span class="badge">4</span></a>
+                                                            <ul class="list-group secondary_list" id="4list-3-1">
+                                                                <li class="list-group-item">
+                                                                    <h4>What methods of payment does Homevago accept?</h4>
+                                                                    <p>We support different payment methods, which depend on the country your payment account is located in. So in addition to major credit and debit cards, certain payment options are available in specific countries or on specific platforms (like the iOS app or Android app).
+                                                                    <br>
+                                                                    We'll show you which payment methods are available to you on the checkout page, before you submit a reservation request. After you select your country, all of your payment details will be shown.
+                                                                    </p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <h4>Payment options available for certain platforms or in select countries</h4>
+                                                                    <ul class="corecrt_correct_list">
+                                                                        <li>Apple Pay for the iOS app</li>
+                                                                        <li>Google Pay for the Android app in the US</li>
+                                                                        <li>PayPal for select countries</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <h4>Payment options available worldwide</h4>
+                                                                        <ul class="corecrt_correct_list">
+                                                                            <li>Most major credit cards and pre-paid credit cards (Visa, MasterCard, Amex, Discover, JCB) as well as many debit cards that can be processed as credit</li>
+                                                                        </ul>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <h4>Payment options available for specific countries</h4>
+                                                                    <h3>Brazil</h3>
+                                                                    <ul class="corecrt_correct_list">
+                                                                        <li>Aura for Brazil</li>
+                                                                        <li>Elo for Brazil</li>
+                                                                        <li>Hipercard for Brazil</li>
+                                                                    </ul>
+                                                                    <p>Note: Payments in Brazil are limited to $3000 (or the equivalent in other currencies) per transaction and $12000 (or the equivalent in other currencies) max monthly spend on Homevago.</p>
+                                                                    
+                                                                    <h3>China</h3>
+                                                                    <ul class="corecrt_correct_list">
+                                                                        <li>Alipay for Mainland China</li>
+                                                                        <li>WeChat Pay for Mainland China</li>
+                                                                    </ul>
+                                                                    
+                                                                    <h3>Other</h3>
+                                                                    <ul class="corecrt_correct_list">
+                                                                        <li>PayU for India</li>
+                                                                        <li>Postepay for Italy</li>
+                                                                        <li>Sofort Überweisung for Germany</li>
+                                                                        <li>iDEAL for the Netherlands</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        
+                                                            <a href="#id-4-3" class="list-group-item list_style_m" onclick="set_display('secondary_list', '4list-3-2')">Security deposits<span class="badge">1</span></a>
+                                                            <ul class="list-group secondary_list" id="4list-3-2">
+                                                                <li class="list-group-item">
+                                                                    <h3>Security deposits</h3>
+                                                                    Find out how Airbnb manages security deposits, when a host can make a claim, and how a deposit is collected<br><br><br>
+                                                                    How does Airbnb handle security deposits?<br><br>
+                                                                    What happens if a host makes a claim on my security deposit?<br><br>
+                                                                    When am I charged for a reservation?<br><br>
+                                                                    How is the price determined for my reservation?<br><br>
+                                                                    Can a security deposit be collected outside of the Airbnb website?<br><br>
+                                                                    What if a host asks for more money?<br><br>
+                                                                </li>
+                                                            </ul>
+                                                            
+                                                            <a href="#id-4-3" class="list-group-item list_style_m" onclick="set_display('secondary_list', '4list-3-3')">Coupons & credits<span class="badge">2</span></a>
+                                                            <ul class="list-group secondary_list" id="4list-3-3">
+                                                                <li class="list-group-item">
+                                                                    <h3>How do I use a coupon code?</h3>
+                                                                    <p>If you have an Airbnb coupon code you want to use towards a home reservation you can add it on the checkout page. Coupon codes can't be applied to existing reservations or to experiences. Only gift cards can be used to purchase experiences.</p>
+                                                                    
+                                                                    <ol class="corecrt_correct_list">
+                                                                        <li>When entering your payment on the checkout page, click Redeem a coupon below your payment method</li>
+                                                                        <li>Enter your code</li> 
+                                                                        <li>Click Apply </li>
+                                                                    </ol>
+                                                                    <p>Having trouble with your code? Please note that coupons can't be used to book domestic reservations on Airbnb India. Double check to make sure you’re entering it correctly.</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <h3>My coupon code isn’t working</h3>
+                                                                    <p>If you have an issue with your coupon code, double-check your email to make sure the code you’re entering is correct.</p>
+                                                                    <p>Here are a few other things to keep in mind if your coupon code isn’t working:</p>
+                                                                    <ul class="corecrt_correct_list">
+                                                                        <li>If your coupon has expired, there is no way to re-activate it.</li>
+                                                                        <li>Coupons can only be used once. If you cancel a reservation that used a coupon, the coupon is also no longer valid.</li>
+                                                                        <li>We only accept coupons issued by Airbnb.</li>
+                                                                        <li>If you don’t use the full amount of a coupon, you won’t receive the difference.</li>
+                                                                        <li>Coupons can't be applied retroactively.</li>
+                                                                        <li>Coupons aren't transferable. A coupon can only be used by the person it was given to.</li>
+                                                                        <li>Coupons can only be used for the type of booking they were issued for. For example, coupons for home reservations can't be used for experience reservations.</li>
+                                                                        <li>Only one coupon can be used per reservation.</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        
+                
+                    
+                <div class="dropdownlist_onepart">
+                        <div class="dropdown_upper row" onclick="display_lower('4', '4')">
+                            <div class="col-sm-1">
+                                <div class="next_holder" style="width:30px; height: 30px">
+                                    <span class="icon-next"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-11">
+                                    Why should I pay Homevago directly?
+                            </div>
+                        </div>
+                        <div class="dropdown_lower-4 row" id="id-4-4">
+                            <div class="row">
+                                <div class="col-sm-2">
+
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="container_detial_dropdown">
+                                        <blockquote>
+                                            <h3>Why should I pay Homevago directly?</h3>
+                                            <p>
+                                                    Paying and communicating through Airbnb helps ensure that you're protected under our Terms of Service, Payments Terms of Service, cancellation and refund policies, Host Guarantee, Host Protection Insurance program and other safeguards. It also makes it easy to find and reference important reservation details like a listing's address, your itinerary, check-in details, and other useful information. We can’t provide these benefits if your reservation isn’t booked and paid for directly through Airbnb.
+                                            </p>
+                                            <p>
+                                                    Paying or communicating outside of Airbnb also makes it harder for us to protect your information and puts you at greater risk of fraud and other security issues, such as phishing.
+                                            </p>
+                                            <h3>Report suspicious messages</h3>
+                                            <p>
+                                                    Never pay for your reservation outside of Airbnb. If someone asks you to pay for a reservation outside our on-site payment system—or you think someone might be sending you links to a fake Airbnb site—tell us about it in this form and report the message.
+                                            </p>
+                                            <p>
+                                                    If you didn’t pay your host through Airbnb (for example, a wire or bank transfer), you may have paid for a fraudulent reservation. To get help, let us know immediately.
+                                            </p>
+                                            <p>
+                                                    If you’re not sure, you can check if your reservation was booked through Airbnb.
+                                            </p>
+                                            <br />
+                                            <br />
+                                            <p>
+                                                    To report a message:
+                                            </p>
+                                            <ol class="corecrt_correct_list">
+                                                <li>Go to your Messages on airbnb.com and click the conversation with the suspicious message</li>
+                                                <li>In the message, click the Flag icon</li>
+                                                <li>Select the reason you’re reporting this person, then click Next</li>
+                                                <li>If you also want to block all communication with this person, click Yes, block now</li>
+                                            </ol>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        
+
+            </div>
+        </div>
+        
+        <div id="five" class="helps_id_container">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                        <blockquote class="text_five">
+                        <h1>Why host on Homevago?</h1>
+                        <p>No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers. You’re in full control of your availability, prices, house rules, and how you interact with guests.</p>
+                        </blockquote>
+                </div>
+                <div class="col-sm-6">
+                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="501.96" height="282" type="text/html" src="https://www.youtube.com/embed/A7Nvz8_ZFz0?autoplay=1&fs=1&iv_load_policy=1&showinfo=0&rel=1&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+                </div>
+            </div>
+            
+            <div class="dropdownlist">
+
+                    
+                <div class="dropdownlist_onepart">
+                    <div class="dropdown_upper row" onclick="display_lower('5', '1')">
+                        <div class="col-sm-1">
+                            <div class="next_holder" style="width:30px; height: 30px">
+                                <span class="icon-next"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            How do I create a listing on Homevago?
+                        </div>
+                    </div>
+                    <div class="dropdown_lower-5 row" id="id-5-1">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="container_detial_dropdown">
+                                    <blockquote>
+                                        You can create a listing in the Host section of your profile. After you publish your listing, it may take up to 6 hours for it to appear in search results.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            
+                <div class="dropdownlist_onepart">
+                    <div class="dropdown_upper row" onclick="display_lower('5', '2')">
+                        <div class="col-sm-1">
+                            <div class="next_holder" style="width:30px; height: 30px">
+                                <span class="icon-next"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                                Who can host on Homevago?
+                        </div>
+                    </div>
+                    <div class="dropdown_lower-5 row" id="id-5-2">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="container_detial_dropdown">
+                                    <blockquote>
+                                        Almost anyone can be a host. It's free to sign up and list your space. The listings available on the site are as diverse as the hosts who list them, so you can post airbeds in apartments, entire houses, rooms in bed and breakfasts or inns, tree houses in the woods, boats on the water, or enchanted castles. Find out more about home types to see how to describe your space.
+                                    </blockquote>
+                                    <blockquote>
+                                        You can list your space in almost any location worldwide. While we would like to keep the Airbnb marketplace open to the entire world, we are required to comply with international regulations that restrict the use of our site by residents of certain countries.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+            
+                <div class="dropdownlist_onepart">
+                    <div class="dropdown_upper row" onclick="display_lower('5', '3')">
+                        <div class="col-sm-1">
+                            <div class="next_holder" style="width:30px; height: 30px">
+                                <span class="icon-next"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                                What legal and regulatory issues?
+                        </div>
+                    </div>
+                    <div class="dropdown_lower-5 row" id="id-5-3">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="container_detial_dropdown">
+                                    <blockquote>
+                                        When deciding whether to become an Airbnb host, it's important for you to understand how the laws work in your city.
+                                        <br>
+                                        Some cities have laws that restrict your ability to host paying guests for short periods. These laws are often part of a city's zoning or administrative codes. In many cities, you must register, get a permit, or obtain a license before you list your property or accept guests. Certain types of short-term bookings may be prohibited altogether. Local governments vary greatly in how they enforce these laws. Penalties may include fines or other enforcement.
+                                        <br>
+                                        These rules can be confusing. We're working with governments around the world to clarify these rules so that everyone has a clear understanding of what the laws are. 
+                                        <br>
+                                        In some tax jurisdictions, Airbnb will take care of calculating, collecting, and remitting local occupancy tax on your behalf. Occupancy tax is calculated differently in every jurisdiction, and we’re moving as quickly as possible to extend this benefit to more hosts around the globe.
+                                        <br>
+                                        In the meantime, please review your local laws before listing your space on Airbnb. More information about your city's laws and regulations may be available on our Responsible Hosting page in the Your City's Regulations section.
+                                        <br>
+                                        By accepting our Terms of Service and activating a listing, you certify that you will follow your local laws and regulations.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                              
+                <div class="dropdownlist_onepart">
+                        <div class="dropdown_upper row" onclick="display_lower('5', '4')">
+                            <div class="col-sm-1">
+                                <div class="next_holder" style="width:30px; height: 30px">
+                                    <span class="icon-next"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-11">
+                                    What regulations apply to my city?
+                            </div>
+                        </div>
+                        <div class="dropdown_lower-5 row" id="id-5-4">
+                            <div class="row">
+                                <div class="col-sm-2">
+    
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="container_detial_dropdown">
+                                        <blockquote>
+                                                When deciding whether to become an Airbnb host, it’s important for you to understand the laws in your city. As a platform and marketplace, we don’t provide legal advice, but we do want to give you some useful links that may help you better understand laws and regulations in your town, city, county, or state. This list is not exhaustive, but it should give you a good start in understanding the kinds of laws that may apply to you. If you have questions, contact your local government, or consult a local lawyer or tax professional.
+                                                <ul class="inner_list">
+                                                    <li><b>Business Licenses: </b>Many cities and counties require owners or operators of certain businesses to apply for and obtain a license before the business can be operated. Many local governments have sections of their websites explaining the business licensing process, and providing you with relevant forms and information. Contact your city or county for more information.</li>
+                                                    <li><b>Building and Housing Standards: </b>Most local governments and many states have rules and regulations specifying minimum construction, design, and maintenance standards for buildings, including regulations on habitability, health, and safety. Certain rules applicable to residential and non-residential uses may be relevant to your listing. Some cities or counties may also require an inspection of your property to make sure it meets minimum habitability standards. Contact your local government to find out what standards apply to your listing.</li>
+                                                    <li><b>Zoning Rules: </b>Most cities and counties have laws that set out the way you can use your home. These rules are often found in a zoning code, planning code, or city ordinances. You should consult these rules or regulations to see if your listing is consistent with current zoning requirements or use definitions, or contact your local government directly.</li>
+                                                    <li><b>Special Permit:</b>Some cities or counties may require a special permit to rent out your home. Contact your city or county government to see if you need one, and, if you do, how to get it.</li>
+                                                    <li><b>Other Rules: </b>It's also important to understand and follow other contracts or rules, such as leases, timeshare ownership rules, condo board or co-op rules, HOA rules, or rules established by tenant organizations. Read your lease agreement and check with your landlord if applicable.</li>
+                                                </ul>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+    
+    
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        function clear_display(class_name)
+        {
+            var helps_content = document.getElementsByClassName(class_name);
+            for(let i = 0; i < helps_content.length; i++)
+            {
+                helps_content[i].style.display = "none";
+            }
+        }
+        function set_display(class_name, active_id)
+        {
+            var helps_content = document.getElementsByClassName(class_name);
+            var active_content = document.getElementById(active_id);
+            for(let i = 0; i < helps_content.length; i++)
+            {
+                helps_content[i].style.display = "none";
+            }
+            active_content.style.display = "block";
+        }
+        function display_lower(num_fun, num_li)
+        {
+            var display_need = document.getElementsByClassName("dropdown_lower-" + num_fun);
+            var active_content = document.getElementById("id-" + num_fun + '-' + num_li);
+            for(let i = 0; i < display_need.length; i++)
+            {
+                display_need[i].style.display = "none";
+            }
+            active_content.style.display = "block";
+        }
+        function reset_display_lower(num_fun)
+        {
+            var display_need = document.getElementsByClassName("dropdown_lower-" + num_fun);
+            for(let i = 0; i < display_need.length; i++)
+            {
+                display_need[i].style.display = "none";
+            }
+        }
+        reset_display_lower('1');
+        reset_display_lower('2');
+        reset_display_lower('3');
+        reset_display_lower('4');
+        reset_display_lower('5');
+        clear_display("secondary_list");
+        set_display("helps_id_container", "frist");
+    </script>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+            <hr />
+            <div class="container">
+                <div class="information short">
+                    <p>Why host</p>
+                    <p><a href="aboutUs.html">About Us</a></p>
+                    <p>Careers</p>
+                    <p>Policy</p>
+                </div>
+                <div class="information short">
+                    <p>User</p>
+                    <p>Private Policy</p>
+                    <p>Need Help</p>
+                    <p>Terms of use</p>
+                </div>
+                <div class="information long">
+                    <p>Contact Info</p>
+                    <p>53300 setapak, Kuala Lumpur</p>
+                    <p>Malaysia</p>
+                    <p>Phone : (011) - 000 - 0000</p>
+                    <p>Email : servicehomevago@yahoo.com</p>
+                    <p>Web   : www.homevago.com</p>
+                </div>
+                <hr class="vertical" />
+                <div class=footer_box>
+                    <div class="footer_image_box">
+                        <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                    </div>
+                    <div class="share_social">
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/company/najib">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/najibrazak">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/110555361869973167886">
+                                    <span class="icon-google-plus"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/najibrazak/">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/najib_razak/">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="information" style="height: 80px;">
+                    <p>&#169; Copyright 1980 - 2020</p>
+                    <p>All right reserved</p>
+                    <p>Private Policy</p>
+                    <p>Homevago Ltd</p>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+
+</html>

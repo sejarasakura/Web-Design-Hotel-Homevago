@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Houses flashcards on Tinycards</title>
+    <meta charset="utf-8" />
+    <!-- apple smart banner -->
+    <meta
+      name="apple-itunes-app"
+      content="app-id=1109425556, affiliate-data=ct=Smart%20banner&pt=1374442"
+    />
+
+    <!-- twitter summary large card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tinycardsapp" />
+    <meta name="twitter:creator" content="@tinycardsapp" />
+    <meta name="twitter:title" content="Houses flashcards on Tinycards" />
+    <meta name="twitter:description" content="Places where you live! 🙂 Tinycards by Duolingo is a fun flashcard app that helps you memorize anything for free, forever." />
+    <meta name="twitter:image" content="https://s3.amazonaws.com/tinycards/image/76345dc0300587a490cfd24479fbe791" />
+
+    <!-- facebook open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tinycards.duolingo.com/decks/2QSHVxXB/houses" />
+    <meta property="og:title" content="Houses flashcards on Tinycards" />
+    <meta property="og:description" content="Places where you live! 🙂 Tinycards by Duolingo is a fun flashcard app that helps you memorize anything for free, forever." />
+    <meta property="og:image" content="https://s3.amazonaws.com/tinycards/image/76345dc0300587a490cfd24479fbe791" />
+    <meta property="og:image:width" content="347" />
+    <meta property="og:image:height" content="400" />
+
+    <!-- Google sitemap support -->
+    <meta name="google-site-verification" content="GjKxQR1HJGuT7guZUueElBU4OCX-lrXIgCHb2IyxHOE" />
+
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="Places where you live! 🙂 Tinycards by Duolingo is a fun flashcard app that helps you memorize anything for free, forever." />
+    <link rel="stylesheet" type="text/css" href="//d17u0960v8a9bp.cloudfront.net/styles-7b2ad1115e264a1172f2.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="//d17u0960v8a9bp.cloudfront.net/favicon.ico" />
+    <link rel="icon" sizes="192x192" href="//d17u0960v8a9bp.cloudfront.net/192x192.png">
+    <link rel="canonical" href="https://tinycards.duolingo.com/decks/2QSHVxXB/houses" />
+
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="//d9np3dj86nsu2.cloudfront.net" crossorigin />
+    <link rel="preconnect" href="//s3.amazonaws.com" crossorigin />
+    <link rel="preconnect" href="//duolingo-images.s3.amazonaws.com" crossorigin />
+    
+
+    <!-- Preload fonts -->
+    <link rel="preload" href="//d17u0960v8a9bp.cloudfront.net/font/din/DINNextRoundedLTPro-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="//d17u0960v8a9bp.cloudfront.net/font/din/DINNextRoundedLTPro-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="//d17u0960v8a9bp.cloudfront.net/font/din/DINNextRoundedLTPro-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="//d17u0960v8a9bp.cloudfront.net/font/din/DINNextRoundedLTPro-Light.woff2" as="font" type="font/woff2" crossorigin />
+    
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <script>
+      window.safeStateVersion = 1;
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-21595814-8', 'auto', {'siteSpeedSampleRate': 10});
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript" src="//d17u0960v8a9bp.cloudfront.net/polyfill-7b2ad1115e264a1172f2.js"></script>
+    <script type="text/javascript" src="//d17u0960v8a9bp.cloudfront.net/rollbar-7b2ad1115e264a1172f2.js"></script>
+    <script type="text/javascript" src="//d17u0960v8a9bp.cloudfront.net/vendor-7b2ad1115e264a1172f2.js"></script>
+    <script type="text/javascript" src="//d17u0960v8a9bp.cloudfront.net/tinycards-7b2ad1115e264a1172f2.js"></script>
+    <script type="text/javascript" src="//d17u0960v8a9bp.cloudfront.net/strings/en-7b2ad1115e264a1172f2.js"></script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '315214058833657',
+          xfbml: true,
+          version: 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </body>
+</html>

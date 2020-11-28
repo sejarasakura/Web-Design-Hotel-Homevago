@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@media (min-width: 1000px) and (max-width: 3000px) {
+    .gmap_canvas, .mapouter
+    {
+        height: 500px;
+    }
+}
+@media (min-width: 480px) and (max-width: 999.99px) {
+    .gmap_canvas, .mapouter
+    {
+        height: 300px;
+    }
+}
+@media (min-width: 380px) and (max-width: 899.99px) {
+    div.content_product{
+        display: block;
+    }
+    div.half_sub_content{
+        width: 100%;
+    }
+}
+@media (min-width: 900px) and (max-width: 8999.99px) {
+    div.content_product{
+        display: flex;
+    }
+    div.half_sub_content{
+        width: 50%;
+    }
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    width: 98%;
+    margin: 30px auto;
+    max-width: 650px;
+}
+.gmap_canvas 
+{
+    overflow:hidden;
+    background:none !important;
+    width: 100%;
+}
+.product_page{
+    height: 600px;
+    width: 98%;
+    margin: 10px 1%;
+    display: block;
+}
+div.pic_slide_con{
+    height: 500px;
+    width: 98%;
+    margin: 0px 1%;
+    display: block;
+}
+.pro_content{
+    margin-top: 10px;
+    padding-top: 20px !important;
+    padding-bottom: 40px !important;
+}
+div.title_product{
+    margin: 20px 6.960312688%;
+    width: 50%;
+}
+div.title_product h1{
+    font-size: 60px;
+    color: #333;
+    font-family: 'dapplegrim_demoregular';
+}
+div.half_sub_content table.catergory_element{
+    max-width: 650px;
+    font-size: 30px;
+    margin: auto;
+    padding: 5px;
+}
+div.half_sub_content table.catergory_element tr td{
+    padding-top: 15px;
+    text-align: top;
+    vertical-align: top;
+}
+div.subfooter_next_pre{
+    display: flex !important;
+    height: 100px;
+}
+a {
+    text-decoration: none;
+}
+div.half_subfooter {
+    width: 50%;
+    height: 80px;
+    margin: 50px 0 0 0;
+}
+div.next_pre_btn {
+    border-radius: 25px;
+    height: 50px;
+    width: 120px;
+    border: 2px solid #333;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #333;
+    font-size: 40px
+}
+div.btn_subfooter {
+    height: 50px;
+    width: 120px;
+    text-decoration: none;
+    color: #333;
+    margin: auto;
+}
+div.next_pre_btn:hover {
+    background-color: #333;
+    color: #ccc;
+    transition-delay: 0.2s;
+    transition: 1s;
+}
+.next{
+    right: 0;
+}
+.pre{
+    left : 0;
+}
+div.half_sub_content{
+    padding: 20px;
+}

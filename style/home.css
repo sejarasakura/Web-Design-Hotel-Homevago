@@ -1,0 +1,102 @@
+
+div.slide_home{
+    margin: 10px;
+}
+
+div.promotion_scroll_container, div.scroll_container{
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+div.scroll_container{
+    border: 1px solid black;
+    border-radius: 0;
+    width: auto!important
+}
+
+div.promotion, div.detail_container{
+    display: block;
+    height: 200px;
+    margin-left: 20px;
+    width: 1863px;
+}
+@media (min-width: 1730px) and (max-width: 9999.98px) {
+    div.promotion_scroll_container, div.scroll_container{
+        overflow: none;
+        margin: auto;
+    }
+}
+@media (min-width: 100px) and (max-width: 1729.98px) {
+    div.promotion_scroll_container, div.scroll_container{
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+div.promotion_item , div.item{
+    display: inline-block;
+    height: 140px;
+    margin: 20px 5px;
+    width: 200px;
+}
+
+div.home_promotion_container{
+    height: 50px;
+    margin-top: 60px;
+}
+
+div.home_promotion_container h1{
+    font-family: 'raphtalia_personal_use_onlyRg';
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+div.home_promotion_container h1 a{
+    text-decoration: none;
+    color: black;
+    vertical-align: top;
+}
+
+
+@media (min-width: 1000px) and (max-width: 9999.98px) {
+    div.image_map_background{
+        overflow: none;
+    }
+}
+@media (min-width: 100px) and (max-width: 999.98px) {
+    div.image_map_background{
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+div.image_map_container
+{
+    width: 1000px;
+    height: 780px;
+}
+
+div.image_map_container {
+    margin: 0 auto;
+}
+
+div.image_map_background {
+    background-image: url("../Image/w_map.png");
+    border: 1px solid black;
+    background-position: center;
+}
+div.item{
+    margin: 30px 20px;
+}
+.map_icons{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+.map_icons a{
+    text-decoration: none;
+}

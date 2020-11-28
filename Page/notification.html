@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+    <!--
+    Semester assginment
+     Review Assignment
+
+     Homevago project
+     Author: 
+     Date:  
+
+     Filename: Home.html
+    -->
+
+<head>
+    <title>Notification</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+    
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+
+    <!-------------------------------------- Javascript ---------------------------------->
+    <script src="../script/user.js"></script>
+    <script src="../script/show_script.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/notification.js"></script>
+
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/show_style.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/notification.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood"> 
+
+    <!------------------------------ Header of the page ------------------------------------>
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li class="actived"><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(false); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+    <script>
+        function display_according()
+        {
+            var acc = document.getElementById('according_menu');
+            var bar = document.getElementById('according_bar');
+            if(acc.style.display == 'none')
+            {
+                bar.style.display = 'none';
+                acc.style.display = 'block';
+            }
+            else
+            {
+                bar.style.display = 'block';
+                acc.style.display = 'none';
+            }
+        }
+    </script>
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="notification_content">
+        <div class="bar_keep_acc" id="according_bar"  onclick="display_according()">
+            
+        </div>
+        <div class="according_menu_notification" id="according_menu">
+            <div class="inbox_container">
+                <h1>inbox</h1>
+                <div class="row" style="width: 130px;text-align: right!important;">
+                    <div class="col-sm-4"></div>
+                    <div class="half_height_box col-sm-4">
+                        <a href="#" title="" onclick="display_according()">
+                                <div class="icon-container">
+                                    
+                            <img src="../Image/icon_png/back.png" alt="hide menu bar" title="hide menu bar" class="icon-container">
+                        </div></a>
+                    </div>
+                    <div class-="half_height_box col-sm-4">
+                        <a href="#" title="" onclick="">
+                            <div class="icon-container">
+                            <img src="../Image/icon_png/writing.png" alt="Edit" title="Edit" class="icon-container">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" title="" onclick="go_to_notification('notification1');">
+                <div class="inbox_title_container">
+                    <div class="noti_title_detial_part">
+                        <div class="upper_part_container">
+                            <div class="upper_part_container_left">
+                                Lee Jing Wei
+                            </div>
+                            <div class="upper_part_container_right">
+                                2018/12/19
+                            </div>
+                        </div>
+                        <div class="middle_part_container">
+                            <div class="overflow_content_hide">
+                                Check-in notices
+                            </div>
+                        </div>
+                        <div class="lower_part_container">
+                            <div class="overflow_content_hide">
+                                Your house is rented you can check n by today
+                            </div>
+                            <span class="icon-star-active" style="float: right; margin-left: 17px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" title="" onclick="go_to_notification('notification2');">
+                <div class="inbox_title_container">
+                    <div class="noti_title_detial_part">
+                        <div class="upper_part_container">
+                            <div class="upper_part_container_left">
+                                Service
+                            </div>
+                            <div class="upper_part_container_right">
+                                2018/12/19
+                            </div>
+                        </div>
+                        <div class="middle_part_container">
+                            <div class="overflow_content_hide">
+                                Updated user account to host account
+                            </div>
+                        </div>
+                        <div class="lower_part_container">
+                            <div class="overflow_content_hide">
+                                Your account is finish updated, you can use it after 12:00am
+                            </div>
+                            <span class="icon-star-active" style="float: right; margin-left: 17px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" title="" onclick="go_to_notification('notification3');">
+                <div class="inbox_title_container">
+                        <div class="noti_title_detial_part">
+                                <div class="upper_part_container">
+                                    <div class="upper_part_container_left">
+                                        Setting
+                                    </div>
+                                    <div class="upper_part_container_right">
+                                        2018/12/18
+                                    </div>
+                                </div>
+                                <div class="middle_part_container">
+                                    <div class="overflow_content_hide">
+                                        Update your host service charge
+                                    </div>
+                                </div>
+                                <div class="lower_part_container">
+                                    <div class="overflow_content_hide">
+                                        your servic charge is paid by yesterday 
+                                    </div>
+                                    <span class="icon-star-active" style="float: right; margin-left: 17px;"></span>
+                                </div>
+                            </div>
+                </div>
+            </a>
+            <a href="#" title="" onclick="go_to_notification('notification4');">
+                <div class="inbox_title_container">
+                        <div class="noti_title_detial_part">
+                                <div class="upper_part_container">
+                                    <div class="upper_part_container_left">
+                                        Homevago
+                                    </div>
+                                    <div class="upper_part_container_right">
+                                        2018/12/17
+                                    </div>
+                                </div>
+                                <div class="middle_part_container">
+                                    <div class="overflow_content_hide">
+                                        Fueture update here: 
+                                    </div>
+                                </div>
+                                <div class="lower_part_container">
+                                    <div class="overflow_content_hide">
+                                            Homevago updated to latest version now
+                                    </div>
+                                    <span class="icon-star-active" style="float: right; margin-left: 17px;"></span>
+                                </div>
+                            </div>
+                </div>
+            </a>
+            <a href="#" title="" onclick="go_to_notification('notification5');">
+                <div class="inbox_title_container">
+                        <div class="noti_title_detial_part">
+                                <div class="upper_part_container">
+                                    <div class="upper_part_container_left">
+                                        Promotion
+                                    </div>
+                                    <div class="upper_part_container_right">
+                                        2018/12/17
+                                    </div>
+                                </div>
+                                <div class="middle_part_container">
+                                    <div class="overflow_content_hide">
+                                        New promotion hari raya
+                                    </div>
+                                </div>
+                                <div class="lower_part_container">
+                                    <div class="overflow_content_hide">
+                                        at 12 may 2019 12:30pm to 12:30 am only pay 20%
+                                    </div>
+                                    <span class="icon-star-active" style="float: right; margin-left: 17px;"></span>
+                                </div>
+                            </div>
+                </div>
+            </a>
+            <a href="#" title="" onclick="go_to_notification('notification6');">
+                <div class="inbox_title_container" style="border-bottom: 1px solid #a57d47;">
+                    <div class="noti_title_detial_part">
+                        <div class="upper_part_container">
+                            <div class="upper_part_container_left">
+                                Homevago
+                            </div>
+                            <div class="upper_part_container_right">
+                                2018/12/16
+                            </div>
+                        </div>
+                        <div class="middle_part_container">
+                            <div class="overflow_content_hide">
+                            Welcome to homevago
+                            </div>
+                        </div>
+                        <div class="lower_part_container">
+                            <div class="overflow_content_hide">
+                                Thank you for sign-up to homevago
+                            </div>
+                            <span class="icon-star-active" style="float: right; margin-left: 17px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="noti_real_content">
+            <div class="all_notification" id="notification1">
+                <div class="block_boxh1_container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="notification_img_con">
+                                <script>write_user_img_portable("../Image/user/pic14.jpg", "Lee Jing Wei")</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <blockquote>
+                                <h1>Lee Jing wei</h1>
+                                <h3>Your house is rented you can check n by today, Please check back the notice that the house is rented to you by jing wei</h3>
+                                <p>19 december 2018</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="container_img_content_not">
+                                <img src="../Image/place4/1.jpg" alt="Rented house" class="maxsize">
+                                </div>
+                                <div class="container_img_content_not">
+                                    <img src="../Image/place4/2.jpg" alt="Rented house" class="maxsize">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <blockquote>
+                                    <script>
+                                    document.write("<h1>" + place_data_3[4] + "</h1>");
+                                    document.write("<h2>" + place_data_3[8] + place_data_3[9] + "</h2>");
+                                    document.write("<br><br><p>" + place_data_3[11] + "</p>");
+                                    document.write("<p>" + place_data_3[12] + "</p>");
+                                    </script>
+                                </blockquote>
+                                <br><br><br><br><br>
+                                <script>write_thankyou("");</script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
+            <div class="all_notification" id="notification2">
+                <div class="block_boxh1_container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="notification_img_con">
+                                <script>write_user_img_portable("../Image/icon_png/support.png", "Service")</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <blockquote>
+                                <h1>Service</h1>
+                                <h3>Updated user account to host account, Your account is finish updated, you can use it after 12:00am</h3>
+                                <p>19 december 2018</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="445" height="250" type="text/html" src="https://www.youtube.com/embed/ZoxKQpl3fCQ?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+                            </div>
+                            <div class="col-sm-6">
+                                <blockquote>
+                                        <p>
+                                                Hey! Glad to see you here. We are here to inform you that your application of being a host from user 
+                                                have been approved. Please comply with our terms and regulations to prevent further problems.
+                                        </p>
+                                        <br><br>
+                                        <p>
+                                                Thus, if you have any doubts about how a host performs the tasks and how to manage the rentals and 
+                                                the the matters caused by renters. Please let us know 
+                                        </p>
+                                        <br><br>
+
+                                        <h1> Homevago </h1>
+                                        <h3> Travel? Homevago </h3>
+
+                                        
+                                        <br><br>
+                                </blockquote>
+                                <script>write_thankyou("");</script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
+            <div class="all_notification" id="notification3">
+                <div class="block_boxh1_container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="notification_img_con">
+                                <script>write_user_img_portable("../Image/icon_png/customer-support.png", "Service")</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <blockquote>
+                                <h1>Setting</h1>
+                                <h3>Updated user account to host account, Your account is finish updated, you can use it after 12:00am</h3>
+                                <p>18 december 2018</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-6">
+                                <h1> Here's the receipt of your current rental: </h1>
+                                <br>
+                                <div class="biger-single-container">
+                                    <img src="../Image/notification/receipt.png" title="receipy bcueru843864562" alt="receipy bcueru843864562" class="maxsize">
+                                </div>
+                                <blockquote>
+                                        <p>
+                                                Hey there! This letter we sent is to inform you that your host service have been updated. As a rebate
+                                                and reward for our platform and responsible coorperate groups and teams. We will have a few charges 
+                                                for every successful bookings and transactions made by hosts and users.
+                                        </p>
+                                        <br><br>
+                                        <p>
+                                                We are pleased to serve you more! Please be informed that the charges of <<ACCURATE AMOUNT>> will be 
+                                                charged automatically for every online transaction and payment.
+                                        </p>
+                                        <br>
+                                </blockquote>
+                                <script>write_thankyou("");</script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
+            <div class="all_notification" id="notification4">
+                    <div class="block_boxh1_container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="notification_img_con">
+                                    <script>write_user_img_portable("../Image/homevago.png", "Homevago")</script>
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <blockquote>
+                                    <h1>Homevago</h1>
+                                    <h3>Homevago updated to latest version now</h3>
+                                    <p>17 december 2018</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">
+    
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h1> Here's the receipt of your current rental: </h1>
+                                    <br>
+                                    <div class="biger-single-container">
+                                        <img src="../Image/notification/receipt.png" title="receipy bcueru843864562" alt="receipy bcueru843864562" class="maxsize">
+                                    </div>
+                                    <blockquote>
+                                            <h1>
+                                                Feature update here
+                                            </h1>
+                                            <br><br>
+                                            <p>
+                                                    We are here to bring you several good news which as below:
+                                                    Firstly, our team have updated and improved some parts of this Homevago platform as the respective
+                                                   users and hosts who always provide us with valueable opinions and suggestions of improvement to make
+                                                   us a better platform to serve you! 
+                                                </p>
+                                            <h2></h2>
+                                            <ul class="list-collection">
+                                                <li>The charges of every transaction will be detailed and emailed to your notification. Please check out!</li>
+                                                <li>GPS feature have been improved because there's several complaints of inaccurate location pinned on maps</li>
+                                                <li>We have improved and beautified our webpages to give you a brand new experience toward our platform.</li>
+                                            </ul>
+                                            <br><br>
+                                            <p>
+                                                    For further <a href="#">information</a> and <a href="forum.html">discussion</a>. 
+                                            </p>
+                                            <br>
+                                    </blockquote>
+                                    <script>write_thankyou("<br><br>Thank you for your support! Homevago, a platform for travellers, freelancers and YOU~");</script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+                    </div>
+            </div>
+            <div class="all_notification" id="notification5">
+                <div class="block_boxh1_container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="notification_img_con">
+                                <script>write_user_img_portable("../Image/icon_png/promotion.png", "Promotion")</script>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <blockquote>
+                                <h1>Promotion</h1>
+                                <h3>New promotion hari raya  at 12 may 2019 12:30pm to 12:30 am only pay 20%</h3>
+                                <p>17 december 2018</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="container_img_content_not">
+                                    <img src="../Image/notification/raya1.jpg" title="Hari raya promotion" alt="Hari raya promotion" class="maxsize">
+                                </div>
+                                <div class="container_img_content_not">
+                                    <img src="../Image/notification/raya2.jpg" title="Hari raya promotion" alt="Hari raya promotion" class="maxsize">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h1> Here's the receipt of your current rental: </h1>
+                                <br>
+                                <blockquote>
+                                    <br><br>
+                                    <p>     Happy Hari Raya Aidilfitri! Do you know that Hari Raya Aidilfitri is the festival of Eid al-Fitri, celebrating 
+                                            victory over the fleshly body after a month-long period of abstinence (hence uasa,?which translates 
+                                            into asting?.
+                                            <br><br>
+                                            This sacred day falls on the first day of 10th month of the Islamic calendar (the Hijrah calendar), 
+                                            when all who have been obedient and hungry come out of their houses to enjoy a day of feasting, 
+                                            communion, and celebration.
+                                            <br><br>
+                                            
+                                            <b>Who celebrates it in Malaysia?</b>
+                                            Muslims. In Malaysia, these include all ethnic Malays (since ethnic Malays are Muslims by law), Indian Muslims, 
+                                            as well as voluntarily converted Muslims of any ethnicity.
+                                        </p>
+                                        <br><br>
+                                    <h2>You just need to:</h2>
+                                    <ul class="list-collection">
+                                        <li>Book the places within the duration from 5 JUN 2019 to 20 JUN 2019</li>
+                                        <li>Get the promo code from our team in the duration of 1 JUN 2019 to 5 JUN 2019</li>
+                                    </ul>
+                                    <br><br>
+                                    <p>
+                                            And congratulation! You have qualified for this promotion!!
+                                    </p>
+                                </blockquote>
+                                <script>write_thankyou("<br><br>Don't forget to share this great opportunity to your family and friends!");</script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
+            <div class="all_notification" id="notification6">
+                    <div class="block_boxh1_container">
+                            <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="notification_img_con">
+                                            <script>write_user_img_portable("../Image/homevago.png", "Homevago")</script>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <blockquote>
+                                            <h1>Homevago</h1>
+                                            <h3>Welcome to homevago, Thank you for sign-up to homevago</h3>
+                                            <p>16 december 2018</p>
+                                        </blockquote>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+        
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <blockquote>
+                                                <p>
+                                                        Welcome for joining this big family of Homevago! Before we setting you up as a verified user.
+                                                </p>
+                                                <br><br>
+                                                <p>
+                                                                                                            
+                                                        You have to check your email for registration code. Click here: My E-mail<<LINK HERE>> to direct access to your 
+                                                            personal email for code!
+                                                </p>
+                                                <br><br>
+        
+                                                <h1> Homevago </h1>
+                                                <h3> Travel? Homevago </h3>
+        
+                                                
+                                                <br><br>
+                                        </blockquote>
+                                        <script>write_thankyou("");</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page ---------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class=footer_box>
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        go_to_notification('notification1');
+    </script>
+
+
+</body>
+
+</html>

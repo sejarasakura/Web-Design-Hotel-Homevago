@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+.side_according, .menu, .item, .btn, span, smenu, smenu a, smenu{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style:none;
+    text-decoration: none;
+}
+
+.side_according{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    min-width: 158.2px;
+    max-width: 180px;
+}
+
+.menu{
+    width: 100%; 
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.item{
+    border-top: 1px solid #1995ad;
+    overflow: hidden;
+}
+
+.btn{
+    display: block;
+    padding: 16px 20px;
+    background-color: #a1d6e2;
+    color: white;
+    position: relative;
+}
+
+.btn_according_active{
+    color: #1995ad;
+    font-weight: bold;
+}
+
+.btn:before{
+    content:"";
+    position: absolute;
+    width:  14px;
+    height: 14px;
+    background-color: #a1d6e2;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.btn span{
+    margin-right: 10px;
+
+}
+
+.smenu{
+    background: #bcbabe;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.smenu a{
+    display: block;
+    padding: 16px 26px;
+    font-size: 14px;
+    color: #fff;
+    margin: 4px 0;
+    position: relative;
+    text-decoration: none;
+}
+
+.smenu a:hover{
+    display: block;
+}
+
+.smenu a:active{
+    display: block;
+}
+
+.smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #a1d6e2;
+    left: 0;
+    top: 0;
+    transition:  0.3s;
+    opacity: 0;
+}
+.smenu a:hover:before{
+    opacity: 1;
+}
+
+.item:target .smenu{
+    max-height: 10em;
+}
+
+.according_container{
+    min-width: 200px;
+    max-width: 220px;
+    min-height: 100%;
+    background-color: #c4dfe6;
+}
+
+@media (min-width: 300px) and (max-width: 618.98px) {
+    .side_according{
+        top: 270px;
+    }
+}
+@media (min-width: 619px) and (max-width: 799.98px) {
+    .side_according{
+        top: 140px;
+    }
+}
+@media (min-width: 800px) and (max-width: 1499.98px) {
+    .side_according{
+        top: 180px;
+    }
+}
+@media (min-width: 1500px) and (max-width: 1799.98px) {
+    .side_according{
+        top: 190px;
+    }
+}
+@media (min-width: 1800px) and (max-width: 1999.98px) {
+    .side_according{
+        top: 220px;
+    }
+}
+
+.realcontent{
+    width: 100%;
+}
+
+
+/*Added External Part*/
+.setting_header{
+    font-family: 'Wood_title';
+    letter-spacing: 1.4px;
+    word-spacing: 6px;
+    font-weight: normal;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+    display: block;
+    font-size: 30pt !important;
+    margin:0;
+    font-weight: bold;
+}
+/*Setting Block Div*/
+.setting_block{
+    min-width: 800px;
+    max-width: 1400px;
+    height: 70px;
+    color: #333;
+    padding: auto;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+.header_setting{
+    min-width: 800px;
+    max-width: 1400px;
+    height: 50px;
+    color: #333;
+    padding: auto;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    font-size: 30px;
+}
+.header_setting h1{
+    padding: 10px;
+}

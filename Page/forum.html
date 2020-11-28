@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Forum</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/show_script.js"></script>
+    <script src="../script/user.js"></script>
+    <script src="../script/bootstrap.min.js"></script>
+
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/show_style.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+
+<body class="wood">
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                <a href="mySetting.html">
+                    <div class="pic_content_user">
+                        <script>set_user_picture();</script>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(false); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <style>
+        .forum_0 {
+            min-height: 100%;
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+
+    <div class="forum_0">
+        <style>
+            .forum_message {
+                width: 90%;
+                margin: auto;
+                display: block;
+                margin-top:20px;
+                margin-bottom: 15px;
+                border: #70552f solid 2px;
+                border-radius: 10px;
+                padding: 0px;
+            }
+
+            blockquote{
+                border: none;
+            }
+
+            .image {
+                float: left;
+                margin-right: 10px;
+            }
+
+            .user {
+                color: #009;
+                margin: auto;
+            }
+
+            .content {
+                margin-left: 30px;
+                font-style: italic;
+            }
+
+            .forum_content {
+                height: 300px;
+                display: flex;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .forum_user_details {
+                margin: 0;
+                height: 300px;
+                width: 25%;
+                padding: 5px;
+                background-color:#dec9b422;
+                border-bottom-left-radius: 8px;
+                border-right: #70552f  solid 1px;
+            }
+
+            .forum_user_message {
+                height: 190px;
+                width: 75%;
+            }
+
+            .picture_container {
+                height: 140px;
+                width: 140px;
+                margin: auto;
+                border-radius: 40px;
+            }
+
+            table.user {
+                text-align: center;
+                color: black;
+                font-size: 25px;
+            }
+            table.user td{
+                padding: 3px;
+            }
+
+
+            .forum_blockquote {
+                padding-left: 15px;
+                padding-top: 10px;
+            }
+
+            .forum_user_message_1 {
+                height: 260px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding: 5px 5px 0 5px;
+                background-color: #c19a6e4f;
+            }
+
+            .forum_user_message_2 {
+                font-size: 20px;
+                height: 40px;
+                vertical-align: middle;
+                padding: 3px 5px 5px 3px;
+                background-color: #bc936066;
+                border-bottom-right-radius: 8px;
+                border-top: #70552f  solid 1px;
+            }
+
+            .forum_user_message_2 a {
+                text-decoration: none;
+                color: #2196f3;
+                vertical-align: middle;
+            }
+
+            .forum_button1 {
+                height: 25px;
+                width: 150px;
+                float: right;
+                display: flex;
+            }
+
+            .forum_button_a {
+                height: 30px;
+                width: 50%;
+                margin: 0px 5px;
+                text-align: center;
+                border: 0px;
+                border-radius: 5px;
+                background-color: #70552f87;
+                cursor: pointer;
+            }
+
+            h1{
+                padding: 5px;
+                background-color: #70552f87;;
+                color: #e3f2fd;
+                border-radius: 8px 8px 0 0;
+                margin: 0;
+            }
+            .discustion{
+                padding: 10px;
+            }
+            .one_discustion{
+                margin: 5px auto;
+                padding: 10px;
+            }
+            .content_discust{
+                padding-left: 30px;
+                margin: 10px;
+            }
+            .user_pic_con_forum{
+                margin: 10px 10px 10px auto!important;
+            }
+            img.user_pic{
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+            .reply-content{
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                border: 0px 1px 1px 1px;
+                border-color: black;
+            }
+        </style>
+
+    <script>
+            function write_user_table(name, email, date, path)
+            {
+                document.write('<table class="user"> <tr> <td>' + name + '</td> </tr> <tr> <td>' + email +'</td> </tr> <tr> <td> <div class="scroll_bar_container"> </div> </td> </tr> <tr> <td> <div class="picture_container"> <img src="'+ path +'" alt="' + name + '" width="100%" height="100%" style="border-radius:50%" /> </div> </td> </tr> <tr> <td>Join Date:' + date + '</td> </tr> </table>');
+            }
+            function write_title(title, discription)
+            {
+                document.write('<blockquote class="forum_blockquote"> <h2 style="font-weight:normal">'+ title+'</h2> <h3 style="font-weight:normal">'+ discription+'</h3> </blockquote>')
+            }
+            function show_discustion(display)
+            {
+                var id_namae = document.getElementById(display);
+                if(id_name.style.display == "none")
+                id_name.style.display = "block";
+                else
+                id_name.style.display = "none";
+            }
+            function clear_display_forum()
+            {
+                var class_name = document.getElementsByClassName('discustion');
+                for(let i = 0; i < class_name.lenght; i++)
+                {
+                    class_name[i].style.display = "none";
+                }
+            }
+            function write_discustion(user, discription)
+            {
+                document.write('<div class="one_discustion"> <div class="row"> <div class="col-sm-1"> </div> <div class="col-sm-2"> <div class="user_pic_con_forum"> <img src="'+ user[10] +'" alt="' + user[0] + '" class="user_pic"> </div> </div> <div class="col-sm-8"> <blockquote > <h1>' + user[0] + '</h1> <p class="reply-content">'+ discription+'</p> </blockquote> </div> <div class="col-sm-1"> </div> </div> </div>')
+            }
+        </script>
+
+        <div class="forum_1">
+
+            <div class="fix_forum">
+
+                <div class="forum_message">
+                    <h1>
+                        <span class="icon-clock-circular-outline"></span>
+                        July - 9 - 2017
+                    </h1>
+
+                    <div class="forum_content">
+
+
+                        <div class="forum_user_details">
+                            <table class="user">
+                                <tr>
+                                    <td>John Lee</td>
+                                </tr>
+                                <tr>
+                                    <td>John@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="scroll_bar_container">
+
+                                        </div><!--Require to fill in -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="picture_container">
+                                            <img src="../Image/user/pic1.jpg" alt="user_1" width="100%" height="100%" style="border-radius:50%" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Join Date: Jan - 1 - 2017</td>
+
+                                </tr>
+                            </table>
+
+                        </div>
+
+                        <div class="forum_user_message">
+                            <div class="forum_user_message_1">
+
+                                <blockquote class="forum_blockquote">
+                                    <h2 style="font-weight:normal">
+
+                                        Unable to use credit card for payment
+                                    </h2>
+                                    <h3 style="font-weight:normal">
+                                        Last night i was searching for a room located at Newcastle.
+                                        The problem is that the moment i want to pay the bill but it shows nothing but error message.
+                                        After i report to the company site they told me to wait for the response.
+                                        What should i do now because im in emergency! Pleaseeeeeeeeee...
+                                    </h3>
+                                </blockquote>
+                                <div class="content_discust">
+                                    <div class="discustion"  id="discustion_1">
+                                        <div class="one_discustion">
+                                            <div class="row">
+                                                <div class="col-sm-1">
+
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="user_pic_con_forum">
+                                                        <img src="../Image/user/pic12.jpg" alt="Lim yi kang" class="user_pic">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <blockquote >
+                                                        <h1>Lim yi kang</h1>
+                                                        <p class="reply-content">The solution is fill up your name and change the request from admin.</p>
+                                                    </blockquote>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <script>
+                                        write_discustion(admin, "We will inbox you and check with you later")
+                                        </script>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="forum_user_message_2">
+                                Direct Link | Share
+                                <a href="https://twitter.com/najibrazak"> <span class="icon-twitter"></span></a>
+                                <a href="https://www.facebook.com/najibrazak/"><span class="icon-facebook"></span></a>
+                                <a href="https://www.instagram.com/najib_razak/"><span class="icon-instagram"></span></a>
+                                <a href="https://www.linkedin.com/company/najib"><span class="icon-linkedin"></span></a>
+
+                                <div class="forum_button1" onclick="show_discustion('discustion_1');">
+                                    <button class="forum_button_a">
+                                        Detail
+                                    </button>
+
+                                    <button class="forum_button_a">
+                                        Apply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forum_message">
+
+                        <h1>
+                            <span class="icon-clock-circular-outline"></span>
+                            July - 15 - 2017<!-- * -->
+                        </h1>
+                    <div class="forum_content">
+
+
+                        <div class="forum_user_details">
+                            <script>write_user_table("Lee Jing Wei", "sejaraskura@gmail.com", "12-4-2018", "../Image/user/pic14.jpg");</script><!-- * -->
+                        </div>
+
+                        <div class="forum_user_message">
+                            <div class="forum_user_message_1">
+                                <script>
+                                    write_title("Extra charges of bookings","Last month i have made a bookings of a single room of 3 days in New York City which near Washington Road and it costs me around RM50 exclusive for any charges");
+                                    
+                                </script><!-- * -->
+                                
+                                <div class="content_discust">
+                                        <div class="discustion"  id="discustion_2">
+    
+                                            <script>
+                                            write_discustion(user_7, "Yea, I have this kind of problems once but after complaints with accurate information of the bookings to responsible department. You will receive reply from them and they will solve the problem for you.");
+                                            write_discustion(user_1, "Waiting for solutions here. I have the same problem here.");
+                                            write_discustion(user_2, "Nevermind then, If there's only some charges being charged~ Just a small case here. Nothing serious");
+                                            write_discustion(admin, "Hey there! Glad to hear from you. We have looked into this problem and inboxed you. For further information and help from us. Please visit our website to know more ABOUT US");
+                                            </script>
+    
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="forum_user_message_2">
+                                Direct Link | Share
+                                <a href="https://twitter.com/najibrazak"> <span class="icon-twitter"></span></a>
+                                <a href="https://www.facebook.com/najibrazak/"><span class="icon-facebook"></span></a>
+                                <a href="https://www.instagram.com/najib_razak/"><span class="icon-instagram"></span></a>
+                                <a href="https://www.linkedin.com/company/najib"><span class="icon-linkedin"></span></a>
+
+                                <div class="forum_button1">
+                                    <button class="forum_button_a" onclick="show_discustion('discustion_3');">
+                                        Detail
+                                    </button>
+
+                                    <button class="forum_button_a">
+                                        Apply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!---->
+
+
+                <div class="forum_message">
+
+                        <h1>
+                            <span class="icon-clock-circular-outline"></span>
+                            MAY - 9 - 2017<!-- * -->
+                        </h1>
+                    <div class="forum_content">
+
+
+                        <div class="forum_user_details">
+                            <script>write_user_table("Tan Jia Yee", "jia_yee33@gmail.com", "1-4-2018", "../Image/user/pic19.jpg");</script><!-- * -->
+                        </div>
+
+                        <div class="forum_user_message">
+                            <div class="forum_user_message_1">
+                                <script>
+                                    write_title("Unresponsive website"," Once i use this website for the first time on my phone. I found out the irresponsive of this website. Anyone here experienced the same problems?");
+                                    
+                                </script><!-- * -->
+                                
+                                <div class="content_discust">
+                                        <div class="discustion"  id="discustion_2">
+    
+                                            <script>
+                                            write_discustion(user_3, "SHXT man. You cannot hope for perfection from a new company website. They will surely make some changes throughout time. Com'on, just give them some time.");
+                                            write_discustion(user_11, "Agree with <<Respondant1 NAME HERE>>. I have helped you to report the Homevago Customer Service. They will reply and improve the system soon. Just be patient, ok?");
+                                            write_discustion(admin, "Glad to have you all here! Our team have made the website more responsive for phone users and PC users! Thank you all for the suggestions and opinions! We will enhance our services and provide greater experiences! Appreciate your responses!");
+                                            </script>
+    
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="forum_user_message_2">
+                                Direct Link | Share
+                                <a href="https://twitter.com/najibrazak"> <span class="icon-twitter"></span></a>
+                                <a href="https://www.facebook.com/najibrazak/"><span class="icon-facebook"></span></a>
+                                <a href="https://www.instagram.com/najib_razak/"><span class="icon-instagram"></span></a>
+                                <a href="https://www.linkedin.com/company/najib"><span class="icon-linkedin"></span></a>
+
+                                <div class="forum_button1">
+                                    <button class="forum_button_a" onclick="show_discustion('discustion_3');">
+                                        Detail
+                                    </button>
+
+                                    <button class="forum_button_a">
+                                        Apply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!---->
+
+
+
+
+
+
+                <div class="forum_message">
+
+                        <h1>
+                            <span class="icon-clock-circular-outline"></span>
+                            MAY - 1 - 2017<!-- * -->
+                        </h1>
+                    <div class="forum_content">
+
+
+                        <div class="forum_user_details">
+                            <script>write_user_table("Alan lau", "alans80@gmail.com", "12-10-2016", "../Image/user/pic20.jpg");</script><!-- * -->
+                        </div>
+
+                        <div class="forum_user_message">
+                            <div class="forum_user_message_1">
+                                <script>
+                                    write_title("Promotion matters","May i know why i booked the room within the promotion date but i still need to pay the original price of the room. I did'nt know this at first until i check the payment history. I'm so shocked because I have planned my trip with fixed amount of money but this instant extra payment made me unable to enjoy the rest of my trip!!!!");
+                                </script><!-- * -->
+                                
+                                <div class="content_discust">
+                                        <div class="discustion"  id="discustion_4">
+    
+                                            <script>
+                                            write_discustion(user_7, "Yea. I understand your problem and how bad you feel right now. I have experienced it once. And the customer service told me that I didn't use the promote code ... I was stunned because I did forget the promote code. You can check back your inbox mail. There's an invoice for you after you made your payment for every single transaction. You can check the promotion code there to see if you have applied or not. Hope this help you!");
+                                            write_discustion(user_12, "Hmm, maybe this is your problem. Have you checked out the promotion code expiry date? Maybe you messed up the 2019 promotion code with 2018 promotion code? I have messed up once and made several complaints about this before my acknowledgement... HAHA Feeling ashamed of my disrespect...");
+                                            write_discustion(user_1, "OMG!! I have checked my mail box and i just know that I forgot to put the promotion code... No wonder there's no discount for me... Sorry for the emotion...");
+                                            write_discustion(admin, "Sorry for our mistake to make you have such bad experiences through our services. We will make improvement on this issue. Hope you enjoy the rest of the bookings. Our team have sent you a free promotion code! Please check out your inbox! Have a great day :>");
+                                            </script>
+    
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="forum_user_message_2">
+                                Direct Link | Share
+                                <a href="https://twitter.com/najibrazak"> <span class="icon-twitter"></span></a>
+                                <a href="https://www.facebook.com/najibrazak/"><span class="icon-facebook"></span></a>
+                                <a href="https://www.instagram.com/najib_razak/"><span class="icon-instagram"></span></a>
+                                <a href="https://www.linkedin.com/company/najib"><span class="icon-linkedin"></span></a>
+
+                                <div class="forum_button1">
+                                    <button class="forum_button_a" onclick="show_discustion('discustion_4');">
+                                        Detail
+                                    </button>
+
+                                    <button class="forum_button_a">
+                                        Apply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!---->
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------------------------------------->
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page ---------------------------------->
+    <footer>
+            <hr />
+            <div class="container">
+                <div class="information short">
+                    <p>Why host</p>
+                    <p><a href="aboutUs.html">About Us</a></p>
+                    <p>Careers</p>
+                    <p>Policy</p>
+                </div>
+                <div class="information short">
+                    <p>User</p>
+                    <p>Private Policy</p>
+                    <p>Need Help</p>
+                    <p>Terms of use</p>
+                </div>
+                <div class="information long">
+                    <p>Contact Info</p>
+                    <p>53300 setapak, Kuala Lumpur</p>
+                    <p>Malaysia</p>
+                    <p>Phone : (011) - 000 - 0000</p>
+                    <p>Email : servicehomevago@yahoo.com</p>
+                    <p>Web   : www.homevago.com</p>
+                </div>
+                <hr class="vertical" />
+                <div class=footer_box>
+                    <div class="footer_image_box">
+                        <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                    </div>
+                    <div class="share_social">
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/company/najib">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/najibrazak">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/110555361869973167886">
+                                    <span class="icon-google-plus"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/najibrazak/">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/najib_razak/">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="information" style="height: 80px;">
+                    <p>&#169; Copyright 1980 - 2020</p>
+                    <p>All right reserved</p>
+                    <p>Private Policy</p>
+                    <p>Homevago Ltd</p>
+                </div>
+            </div>
+        </footer>
+    <script>
+        clear_display_forum();
+    </script>
+</body>
+</html>

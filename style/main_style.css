@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+.col-1-12{
+    width: 8.333325%!important;
+}
+.col-2-12{
+    width: 16.66667%!important;
+}
+.col-3-12{
+    width: 25%!important;
+}
+.col-4-12{
+    width: 33.33333%!important;
+}
+.col-5-12{
+    width: 41.66667%!important;
+}
+.col-6-12{
+    width: 50%!important;
+}
+.col-7-12{
+    width: 58.33333%!important;
+}
+.col-8-12{
+    width: 66.66667%!important;
+}
+.col-9-12{
+    width: 75%!important;
+}
+.col-10-12{
+    width: 83.33333%!important;
+}
+.col-11-12{
+    width: 91.666675%!important;
+}
+.col-12-12{
+    width: 100%!important;
+}
+
+
+.row-1-12{
+    width: 8.333325%!important;
+}
+.row-2-12{
+    width: 16.66667%!important;
+}
+.row-3-12{
+    width: 25%!important;
+}
+.row-4-12{
+    width: 33.33333%!important;
+}
+.row-5-12{
+    width: 41.66667%!important;
+}
+.row-6-12{
+    width: 50%!important;
+}
+.row-7-12{
+    width: 58.33333%!important;
+}
+.row-8-12{
+    width: 66.66667%!important;
+}
+.row-9-12{
+    width: 75%!important;
+}
+.row-10-12{
+    width: 83.33333%!important;
+}
+.row-11-12{
+    width: 91.666675%!important;
+}
+.row-12-12{
+    width: 100%!important;
+}

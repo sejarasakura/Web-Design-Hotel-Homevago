@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="wood">
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+Semester assginment
+ Review Assignment
+
+Homevago project
+ Author: 
+ Date:  
+
+ Filename: myAccount.html
+-->
+
+<head>
+    <title>My account</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+    
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/manage_account.js"></script>
+    <script src="../script/catogeries.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/user.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/according_menu.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/catogery.css" rel="stylesheet" type="text/css" />
+    <link href="../style/my_booking.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood">
+    
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+
+        <nav class="nav">            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(true); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="content" style="display:flex">
+        
+    <!-------------------------------------------- side navigation bar  ---------------------------------------->
+    <div class="according_container">
+            <div class="side_according">
+                <div class="menu">
+                    <li class="item">
+                        <a href="myAccount.html" class="btn" style="text-align: left;">
+                            <span class="icon-wishlist"></span> My wish list
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myBooking.html" class="btn btn_according_active" style="text-align: left;">
+                            <span class="icon-booking"></span> My booking
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myStatus.html" class="btn" style="text-align: left;">
+                            <span class="icon-status"></span> Status
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="mySetting.html" class="btn" style="text-align: left;">
+                            <span class="icon-settings-gears"></span> Setting
+                        </a>
+                    </li>
+                    <li class="item" id="reviews_menu">
+                        <a href="#reviews_menu" class="btn" style="text-align: left;">
+                            <span class="icon-reveiw"></span> My Reviews
+                        </a>
+                        <div class="smenu">
+                            <a href="myRating.html" class="" style="text-align: left;">Rating and discription</a>
+                            <a href="myComplant.html" style="text-align: left;">Complants</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="login.html" class="btn" onclick="logout();" style="text-align: left;">
+                            <span class="icon-logout"></span> Log Out
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <script>
+            var my_booking1 = get_product(30);
+            var my_booking2 = get_product(21);
+            var my_booking3 = get_product(4);
+            var my_booking4 = get_product(10);
+        </script>
+        <div class="realcontent">
+            <div class="booking_list">
+                <div class="header_booking">
+                    <h1 class="setting_header"><span class="icon-booking"></span> Booking List</h1>
+                </div>
+                <div class="booking_element">
+                    <div class="body_booking_element">
+                        <div class="booking_element_pic_box">
+                            <div class="direct_image_box">
+                                <script>
+                                document.write('<image src="' + my_booking1[1] + '/1.jpg' + '" title="' + my_booking1[4] + '" alt="' + my_booking1[4] + '" width="100%" height="100%" style="border-radius: 10px;"></image>');
+                                </script>
+                            </div>
+                        </div>
+                        <div class="booking_element_detail">
+                            <table class="detail_booking">
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write(my_booking1[4] + "-Alan Lau");
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            Resit Number AZ21NABZ00000000137010001944
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write('Address: ' + user_1[5] + ' ' + user_1[7] + ' ' + user_1[6] + ' ');
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: left">
+                                        </div>
+                                    </td>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: right">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer_booking_element">
+                        <div class="footer_booking_e_left">
+                        <a href="helps.html"><span class="icon-help"></span></a> 
+                        <button class="booking_submit_button booking_submit_button_rate" onclick="" style="float: left;">
+                            <span class="icon-star-active"></span> Rating
+                        </button>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                        </div>
+                        <div class="footer_booking_e_right">
+                            <button class="booking_submit_button booking_submit_button_cancle" onclick="">
+                                <span class="icon-error-cancel-cross"></span> Cancle
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_pay" onclick="">
+                                <span class="icon-payment"></span> Pay
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_checked" onclick="">
+                                Check In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+                <div class="booking_element">
+                    <div class="body_booking_element">
+                        <div class="booking_element_pic_box">
+                            <div class="direct_image_box">
+                                <script>
+                                document.write('<image src="' + my_booking3[1] + '/1.jpg' + '" title="' + my_booking3[4] + '" alt="' + my_booking3[4] + '" width="100%" height="100%" style="border-radius: 10px;"></image>');
+                                </script>
+                            </div>
+                        </div>
+                        <div class="booking_element_detail">
+                            <table class="detail_booking">
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write(my_booking3[4] + "-" + user_7[0]);
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            Resit Number AZ21NABZ0019445792353925833
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write('Address: ' + user_7[5] + ' ' + user_7[7] + ' ' + user_7[6] + ' ');
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: left">
+                                        </div>
+                                    </td>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: right">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer_booking_element">
+                        <div class="footer_booking_e_left">
+                        <a href="helps.html"><span class="icon-help"></span></a> 
+                        <button class="booking_submit_button booking_submit_button_rate" onclick="" style="float: left;">
+                            <span class="icon-star-active"></span> Rating
+                        </button>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating_2" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating_2" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating_2" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating_2" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating_2" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating_2" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating_2" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating_2" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating_2" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating_2" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                        </div>
+                        <div class="footer_booking_e_right">
+                            <button class="booking_submit_button booking_submit_button_cancle" onclick="">
+                                <span class="icon-error-cancel-cross"></span> Cancle
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_pay" onclick="">
+                                <span class="icon-payment"></span> Pay
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_checked" onclick="">
+                                Check In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                
+                <div class="booking_element">
+                    <div class="body_booking_element">
+                        <div class="booking_element_pic_box">
+                            <div class="direct_image_box">
+                                <script>
+                                document.write('<image src="' + my_booking2[1] + '/1.jpg' + '" title="' + my_booking2[4] + '" alt="' + my_booking2[4] + '" width="100%" height="100%" style="border-radius: 10px;"></image>');
+                                </script>
+                            </div>
+                        </div>
+                        <div class="booking_element_detail">
+                            <table class="detail_booking">
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write(my_booking2[4] + "-" + user_11[0]);
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            Resit Number AZ21NABZ0430840310001944380420
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write('Address: ' + user_11[5] + ' ' + user_11[7] + ' ' + user_11[6] + ' ');
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: left">
+                                        </div>
+                                    </td>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: right">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer_booking_element">
+                        <div class="footer_booking_e_left">
+                        <a href="helps.html"><span class="icon-help"></span></a> 
+                        <button class="booking_submit_button booking_submit_button_rate" onclick="" style="float: left;">
+                            <span class="icon-star-active"></span> Rating
+                        </button>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating_3" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating_3" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating_3" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating_3" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating_3" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating_3" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating_3" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating_3" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating_3" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating_3" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                        </div>
+                        <div class="footer_booking_e_right">
+                            <button class="booking_submit_button booking_submit_button_cancle" onclick="">
+                                <span class="icon-error-cancel-cross"></span> Cancle
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_pay" onclick="">
+                                <span class="icon-payment"></span> Pay
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_checked" onclick="">
+                                Check In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                
+                <div class="booking_element">
+                    <div class="body_booking_element">
+                        <div class="booking_element_pic_box">
+                            <div class="direct_image_box">
+                                <script>
+                                document.write('<image src="' + my_booking4[1] + '/1.jpg' + '" title="' + my_booking4[4] + '" alt="' + my_booking4[4] + '" width="100%" height="100%" style="border-radius: 10px;"></image>');
+                                </script>
+                            </div>
+                        </div>
+                        <div class="booking_element_detail">
+                            <table class="detail_booking">
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write(my_booking4[4] + "-" + user_12[0]);
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            Resit Number AZ21NABZ000000001893292298932
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table" colspan="2">
+                                        <div class="hidden_table_over_flow">
+                                            <script>
+                                                document.write('Address: ' + user_12[5] + ' ' + user_12[7] + ' ' + user_12[6] + ' ');
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: left">
+                                        </div>
+                                    </td>
+                                    <td class="large_booking_table">
+                                        <div class="hidden_table_over_flow" style="align-content: right">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer_booking_element">
+                        <div class="footer_booking_e_left">
+                        <a href="helps.html"><span class="icon-help"></span></a> 
+                        <button class="booking_submit_button booking_submit_button_rate" onclick="" style="float: left;">
+                            <span class="icon-star-active"></span> Rating
+                        </button>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating_4" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating_4" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating_4" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating_4" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating_4" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating_4" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating_4" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating_4" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating_4" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating_4" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                        </div>
+                        <div class="footer_booking_e_right">
+                            <button class="booking_submit_button booking_submit_button_cancle" onclick="">
+                                <span class="icon-error-cancel-cross"></span> Cancle
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_pay" onclick="">
+                                <span class="icon-payment"></span> Pay
+                            </button>
+                            <button class="booking_submit_button booking_submit_button_checked" onclick="">
+                                Check In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

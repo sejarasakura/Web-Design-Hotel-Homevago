@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="wood">
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+Semester assginment
+ Review Assignment
+
+Homevago project
+ Author: 
+ Date:  
+
+ Filename: myAccount.html
+-->
+
+<head>
+    <title>My account</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+    
+    
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/manage_account.js"></script>
+    <script src="../script/catogeries.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/user.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/according_menu.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/my_complaints.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood">
+    
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(true); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="content" style="display:flex">
+        
+    <!-------------------------------------------- side navigation bar  ---------------------------------------->
+    <div class="according_container">
+            <div class="side_according">
+                <div class="menu">
+                    <li class="item">
+                        <a href="myAccount.html" class="btn" style="text-align: left;">
+                            <span class="icon-wishlist"></span> My wish list
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myBooking.html" class="btn" style="text-align: left;">
+                            <span class="icon-booking"></span> My booking
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myStatus.html" class="btn" style="text-align: left;">
+                            <span class="icon-status"></span> Status
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="mySetting.html" class="btn" style="text-align: left;">
+                            <span class="icon-settings-gears"></span> Setting
+                        </a>
+                    </li>
+                    <li class="item" id="reviews_menu">
+                        <a href="#reviews_menu" class="btn  btn_according_active" style="text-align: left;">
+                            <span class="icon-reveiw"></span> My Reviews
+                        </a>
+                        <div class="smenu">
+                            <a href="myRating.html" class="btn_according_active" style="text-align: left;">Rating and discription</a>
+                            <a href="myComplant.html" style="text-align: left;">Complants</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="login.html" class="btn" onclick="logout();" style="text-align: left;">
+                            <span class="icon-logout"></span> Log Out
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="realcontent">
+            <div class="header_setting">
+                <div class="setting_block">
+                    <h1 class="setting_header"><span class="icon-complaint"></span> Complaint</h1>
+                </div>
+            </div>
+            <div class="complaints_to_us_flex">
+                <div class="complaints_to_us_fix">
+                    <div class="h1_container">
+                        Complaints to us
+                    </div>
+                    
+                    <form action="" method="post" onsubmit="">
+                        <fieldset class="complaints">
+                            <table class="from_table">
+                                <tbody>
+                                    <tr>
+                                        <td><label for="name">
+                                            Name :
+                                        </label></td>
+                                        <td><input type="text" name="name" placeholder="Your real Name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="email">
+                                                E-Mail :
+                                        </label></td>
+                                        <td><input type="email" name="email" placeholder="E-mail Address"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="title">
+                                                Title :
+                                        </label></td>
+                                        <td><input type="text" name="title" placeholder="Title of problem"></td>
+                                    <tr>
+                                    <tr>
+                                        <td><label for="reason">
+                                                Reason :
+                                        </label></td>
+                                        <td><textarea name="reason" cols="30" rows="10" placeholder="The reason you compiant us"></textarea></td>
+                                    <tr>
+                                    <tr>
+                                        <td><label for="further_advance">
+                                                Advance :
+                                        </label></td>
+                                        <td><textarea name="further_advance" cols="30" rows="10" placeholder="How to improve"></textarea></td>
+                                    <tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

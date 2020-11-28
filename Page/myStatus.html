@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="wood">
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+Semester assginment
+ Review Assignment
+
+Homevago project
+ Author: 
+ Date:  
+
+ Filename: myAccount.html
+-->
+
+<head>
+    <title>My account</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+
+    <!-------------------------------------- Javascript ---------------------------------->
+    <script src="../script/user.js"></script>
+    <script src="../script/manage_account.js"></script>
+    <script src="../script/catogeries.js"></script>
+    <script src="../script/product.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/according_menu.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/catogery.css" rel="stylesheet" type="text/css" />
+    <link href="../style/status.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood">
+    
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(true); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="content" style="display:flex">
+    <!-------------------------------------------- side navigation bar  ---------------------------------------->
+        <div class="according_container">
+            <div class="side_according">
+                <div class="menu">
+                    <li class="item">
+                        <a href="myAccount.html" class="btn">
+                            <span class="icon-wishlist"></span> My wish list
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myBooking.html" class="btn">
+                            <span class="icon-booking"></span> My booking
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myStatus.html" class="btn  btn_according_active">
+                            <span class="icon-status"></span> Status
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="mySetting.html" class="btn">
+                            <span class="icon-settings-gears"></span> Setting
+                        </a>
+                    </li>
+                    <li class="item" id="reviews_menu">
+                        <a href="#reviews_menu" class="btn">
+                            <span class="icon-reveiw"></span> My Reviews
+                        </a>
+                        <div class="smenu">
+                            <a href="myRating.html">Rating and discription</a>
+                            <a href="myComplant.html">Complants</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="login.html" class="btn" onclick="logout();">
+                            <span class="icon-logout"></span> Log Out
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="realcontent">
+            <div class="header_setting">
+                <div class="setting_block">
+                    <h1 class="setting_header"><span class="icon-status"></span> Status</h1>
+                </div>
+            </div>
+            <div class='rg-container'>
+                <div class="fix_conctent_table">
+                    <table class='rg-table status_table_style' summary='Hed'>
+                        <caption>
+                            
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class='number'>No</th>
+                                <th class='text'>Name</th>
+                                <th class='text'>User ID</th>
+                                <th>Arrival</th>
+                                <th>Depature</th>
+                                <th class='text '>Place</th>
+                                <th>Night</th>
+                                <th class='text '>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr class=''>
+                                <td class='number ' data-title='No'>1</td>
+                                <td class='text ' data-title='Name'>Lee Jing wei</td>
+                                <td class='text ' data-title='User ID'>U1807383</td>
+                                <td data-title='Arrival'>8/25/2018</td>
+                                <td data-title='Depature'>4/6/2018</td>
+                                <td class='text ' data-title='Place'>Kuala Tengganu</td>
+                                <td data-title='Night'>1</td>
+                                <td class='text ' data-title='Status'>checked-in</td>
+                            </tr>
+                        
+            
+                            <tr class=''>
+                                <td class='number ' data-title='No'>2</td>
+                                <td class='text ' data-title='Name'>Alan Lau</td>
+                                <td class='text ' data-title='User ID'>U7142392</td>
+                                <td data-title='Arrival'>3/21/2018</td>
+                                <td data-title='Depature'>3/23/2018</td>
+                                <td class='text ' data-title='Place'>Langkawi</td>
+                                <td data-title='Night'>2</td>
+                                <td class='text ' data-title='Status'>padding</td>
+                            </tr>
+                        
+            
+                            <tr class=''>
+                                <td class='number ' data-title='No'>3</td>
+                                <td class='text ' data-title='Name'>Lim Sai Keat</td>
+                                <td class='text ' data-title='User ID'>U3294329</td>
+                                <td data-title='Arrival'>2/28/2018</td>
+                                <td data-title='Depature'>3/2/2018</td>
+                                <td class='text ' data-title='Place'>Pulau Pangkok</td>
+                                <td data-title='Night'>3</td>
+                                <td class='text ' data-title='Status'>padding</td>
+                            </tr>
+                        
+            
+                            <tr class=''>
+                                <td class='number ' data-title='No'>4</td>
+                                <td class='text ' data-title='Name'>John Lee</td>
+                                <td class='text ' data-title='User ID'>H3974329</td>
+                                <td data-title='Arrival'>4/2/2018</td>
+                                <td data-title='Depature'>4/4/2018</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='Night'>2</td>
+                                <td class='text ' data-title='Status'>checked-out</td>
+                            </tr>
+                        
+            
+                            <tr class=''>
+                                <td class='number ' data-title='No'>5</td>
+                                <td class='text ' data-title='Name'>Tan Jia Yee</td>
+                                <td class='text ' data-title='User ID'>A9341239</td>
+                                <td data-title='Arrival'>12/8/2018</td>
+                                <td data-title='Depature'>12/9/2018</td>
+                                <td class='text ' data-title='Place'>Selangor</td>
+                                <td data-title='Night'>1</td>
+                                <td class='text ' data-title='Status'>checked-out</td>
+                            </tr>
+                        
+            
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='No'>6</td>
+                                <td class='text ' data-title='Name'>Chin Ming Hui</td>
+                                <td class='text ' data-title='User ID'>U6821418</td>
+                                <td data-title='Arrival'>9/7/2018</td>
+                                <td data-title='Depature'>9/10/2018</td>
+                                <td class='text ' data-title='Place'>Pulau Pinang</td>
+                                <td data-title='Night'>3</td>
+                                <td class='text ' data-title='Status'>paid</td>
+                            </tr>
+                        
+            
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='No'>7</td>
+                                <td class='text ' data-title='Name'>Tan Jun Chyi</td>
+                                <td class='text ' data-title='User ID'>A7934239</td>
+                                <td data-title='Arrival'>12/5/2018</td>
+                                <td data-title='Depature'>12/10/2018</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='Night'>5</td>
+                                <td class='text ' data-title='Status'>padding</td>
+                            </tr>
+                            
+                            <tr class=''>
+                                <td class='number ' data-title='8'>9</td>
+                                <td class='text ' data-title='Low Wei Jian'>Jason Kwan</td>
+                                <td class='text ' data-title='H8309124'>U9237953</td>
+                                <td class='text ' data-title='27/10/2018'>3/7/2019</td>
+                                <td class='text ' data-title='29/10/2018'>4/7/2019</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='2'>1</td>
+                                <td class='text ' data-title='padding'>checked-in</td>
+                            </tr>
+                        
+
+                            <tr class=''>
+                                <td class='number ' data-title='8'>10</td>
+                                <td class='text ' data-title='Low Wei Jian'>Lolita</td>
+                                <td class='text ' data-title='H8309124'>H3724952</td>
+                                <td class='text ' data-title='27/10/2018'>7/9/2018</td>
+                                <td class='text ' data-title='29/10/2018'>10/9/2018</td>
+                                <td class='text ' data-title='Place'>Sabah</td>
+                                <td data-title='2'>3</td>
+                                <td class='text ' data-title='padding'>checked-in</td>
+                            </tr>
+                        
+
+                            <tr class=''>
+                                <td class='number ' data-title='8'>11</td>
+                                <td class='text ' data-title='Low Wei Jian'>Chan Ming Zi</td>
+                                <td class='text ' data-title='H8309124'>H7239523</td>
+                                <td class='text ' data-title='27/10/2018'>5/8/2018</td>
+                                <td class='text ' data-title='29/10/2018'>9/8/2018</td>
+                                <td class='text ' data-title='Place'>Sarawak</td>
+                                <td data-title='2'>4</td>
+                                <td class='text ' data-title='padding'>padding</td>
+                            </tr>
+                        
+
+                            <tr class=''>
+                                <td class='number ' data-title='8'>12</td>
+                                <td class='text ' data-title='Low Wei Jian'>Tan Wei Jian</td>
+                                <td class='text ' data-title='H8309124'>U2378945</td>
+                                <td class='text ' data-title='27/10/2018'>2/4/2018</td>
+                                <td class='text ' data-title='29/10/2018'>5/4/2018</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='2'>3</td>
+                                <td class='text ' data-title='padding'>checked-out</td>
+                            </tr>
+                        
+
+                            <tr class=''>
+                                <td class='number ' data-title='8'>13</td>
+                                <td class='text ' data-title='Low Wei Jian'>Larry Wong</td>
+                                <td class='text ' data-title='H8309124'>U7923446</td>
+                                <td class='text ' data-title='27/10/2018'>23/2/2019</td>
+                                <td class='text ' data-title='29/10/2018'>28/2/2019</td>
+                                <td class='text ' data-title='Place'>Putrajaya</td>
+                                <td data-title='2'>5</td>
+                                <td class='text ' data-title='padding'>padding</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>14</td>
+                                <td class='text ' data-title='Low Wei Jian'>How jason</td>
+                                <td class='text ' data-title='H8309124'>H7235592</td>
+                                <td class='text ' data-title='27/10/2018'>13/2/2019</td>
+                                <td class='text ' data-title='29/10/2018'>15/2/2019</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='2'>2</td>
+                                <td class='text ' data-title='padding'>checked-out</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>15</td>
+                                <td class='text ' data-title='Low Wei Jian'>Chin Han Ming</td>
+                                <td class='text ' data-title='H8309124'>U4839752</td>
+                                <td class='text ' data-title='27/10/2018'>12/2/2019</td>
+                                <td class='text ' data-title='29/10/2018'>13/2/2019</td>
+                                <td class='text ' data-title='Place'>Kuala Tengganu</td>
+                                <td data-title='2'>1</td>
+                                <td class='text ' data-title='padding'>checked-out</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>16</td>
+                                <td class='text ' data-title='Low Wei Jian'>Lim Kang Yee</td>
+                                <td class='text ' data-title='H8309124'>H7923382</td>
+                                <td class='text ' data-title='27/10/2018'>14/3/2019</td>
+                                <td class='text ' data-title='29/10/2018'>16/3/2019</td>
+                                <td class='text ' data-title='Place'>Selangor</td>
+                                <td data-title='2'>2</td>
+                                <td class='text ' data-title='padding'>padding</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>17</td>
+                                <td class='text ' data-title='Low Wei Jian'>Tan Wei Sian</td>
+                                <td class='text ' data-title='H8309124'>U1024833</td>
+                                <td class='text ' data-title='27/10/2018'>11/4/2019</td>
+                                <td class='text ' data-title='29/10/2018'>12/4/2019</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='2'>1</td>
+                                <td class='text ' data-title='padding'>checked-in</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>18</td>
+                                <td class='text ' data-title='Low Wei Jian'>Brayan Tam</td>
+                                <td class='text ' data-title='H8309124'>H9238480</td>
+                                <td class='text ' data-title='27/10/2018'>7/3/2019</td>
+                                <td class='text ' data-title='29/10/2018'>8/3/2019</td>
+                                <td class='text ' data-title='Place'>Sarawak</td>
+                                <td data-title='2'>1</td>
+                                <td class='text ' data-title='padding'>checked-out</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>19</td>
+                                <td class='text ' data-title='Low Wei Jian'>Chin Lin Jack</td>
+                                <td class='text ' data-title='H8309124'>U8239593</td>
+                                <td class='text ' data-title='27/10/2018'>9/9/2018</td>
+                                <td class='text ' data-title='29/10/2018'>12/9/2018</td>
+                                <td class='text ' data-title='Place'>Pulau Pinang</td>
+                                <td data-title='2'>3</td>
+                                <td class='text ' data-title='padding'>padding</td>
+                            </tr>
+                        
+
+                            <tr class='hide-mobile'>
+                                <td class='number ' data-title='8'>20</td>
+                                <td class='text ' data-title='Low Wei Jian'>Rinish A/L Blada</td>
+                                <td class='text ' data-title='H8309124'>H7923548</td>
+                                <td class='text ' data-title='27/10/2018'>6/7/2018</td>
+                                <td class='text ' data-title='29/10/2018'>8/7/2018</td>
+                                <td class='text ' data-title='Place'>Kuala Lumpur</td>
+                                <td data-title='2'>2</td>
+                                <td class='text ' data-title='padding'>checked-in</td>
+                            </tr>
+                        
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+

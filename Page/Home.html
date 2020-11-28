@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <!--
+    Semester assginment
+     Review Assignment
+
+     Homevago project
+     Author: 
+     Date:  
+
+     Filename: Home.html
+    -->
+
+<head>
+    <title>Home Page</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+    
+    
+    <!------------------------------------- Bootstarp ------------------------------>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    <!-------------------------------------- Javascript ---------------------------------->
+    <script src="../script/user.js"></script>
+    <script src="../script/show_script.js"></script>
+    <script src="../script/product.js"></script>
+
+
+    <!---------------------------------------- Jquery ------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/show_style.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/home.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+
+</head>
+<body class="wood"> 
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="actived" style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(false); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="content">
+        <script>
+            var current, i;
+            const number_slide = 5;
+            const pic_name = "../Image/picture_background/pic";
+            document.write('<style>');
+            for (i = 0; i < number_slide; i++) {
+                document.write('.slide' + (1 + i) + '{ background-image: url("' +
+                    pic_name + (1 + i) + '.png"); }');
+            }
+            document.write('</style>');
+        </script>
+        <div id="main_content">
+        <div class="slide_home">
+            <div class="subbody">
+                <div class="wrap">
+                    <div id="arrow-left" class="arrow" title="Previous" onclick="slideLeft();"></div>
+                    <div id="arrow-right" class="arrow" title="Next" onclick="slideRight();"></div>
+                    <div id="slider">
+                        <script>
+                            for (i = 0; i < number_slide; i++) {
+                                document.write('<div class="slide slide' + (i + 1) + '"> <div class="slide-content"> </div> </div>')
+                            }
+                        </script>
+                    </div>
+                    <div class="dot_menu">
+                        <script>
+                            var persent = (((300 - (20 * number_slide)) / (number_slide + 1)) / 300) * 100;
+                            for (i = 0; i < number_slide; i++) {
+                                document.write('<div class="dot" onclick=on_slide(' +
+                                    i + '); style="margin-left: ' + persent + '%" id="dot_'+ i +'"></div>');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home_promotion_container">
+            <h1><a href="promotion.html" title="promotion">
+                <span class="icon-sale" style="color: red">
+                </span> Promotion</a></h1>
+        </div>
+        <div class="promotion_scroll_container">
+            <div class="promotion">
+                <div class="promotion_item" style="margin-left: 15px;">
+                    <a href="single_page.html" onclick="change_current(1);">
+                        <img src="../Image/promotion/home_1.jpg" atl="Promotion Home" title="Promotion Home" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(6);">
+                        <img src="../Image/promotion/home_6.jpg" atl="Promotion Home" title="Promotion Home" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(9);">
+                        <img src="../Image/promotion/office_3.jpg" atl="Promotion Office" title="Promotion Office" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(12);">
+                        <img src="../Image/promotion/office_6.jpg" atl="Promotion Office" title="Promotion Office" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(14);">
+                        <img src="../Image/promotion/ROOM_2.jpg" atl="Promotion Room" title="Promotion Room" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(21);">
+                        <img src="../Image/promotion/restaurant_3.jpg" atl="Promotion Restaurant" title="Promotion Restaurant" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(24);">
+                        <img src="../Image/promotion/restaurant_6.jpg" atl="Promotion Restaurant" title="Promotion Restaurant" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="promotion_item">
+                    <a href="single_page.html" onclick="change_current(27);">
+                        <img src="../Image/promotion/place_3.jpg" atl="Promotion Place" title="Promotion Place" width="100%" height="100%" />
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="map">
+            <div class="scroll_container" id="terengganu">
+                <!-- 12 30 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(12);
+                        write_item(30);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="kelantan">
+                <!-- 16 28 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(16);
+                        write_item(28);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="kedah">
+                <!-- 8 4 2 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(8);
+                        write_item(4);
+                        write_item(2);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="sabah">
+                <!-- 22 5 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(22);
+                        write_item(5);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="sarawak">
+                <!-- 18 24 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(18);
+                        write_item(24);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="johor">
+                <!-- 17 10 6 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(17);
+                        write_item(10);
+                        write_item(6);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="melaka">
+                <!-- 14 19 20 26 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(14);
+                        write_item(19);
+                        write_item(20);
+                        write_item(26);
+                    </script>                
+                </div>
+            </div>
+            <div class="scroll_container" id="ns">
+                <!-- 13 27 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(13);
+                        write_item(27);
+                    </script>                 
+                </div>
+            </div>
+            <div class="scroll_container" id="pahang">
+                <!-- 21 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(21);
+                    </script> 
+                </div>
+            </div>
+            <div class="scroll_container" id="perak">
+                <!-- 1 7 9 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(1);
+                        write_item(7);
+                        write_item(9);
+                    </script>
+                </div>
+            </div>
+            <div class="scroll_container" id="selangor">
+                <!-- 29 25 23 15 11 3 -->
+                <div class="detail_container">
+                    <script>
+                        write_item(29);
+                        write_item(25);
+                        write_item(23);
+                        write_item(15);
+                        write_item(11);
+                        write_item(3);
+                    </script>
+                </div>
+            </div>
+            <div class="image_map_background">
+                <div class="image_map_container">
+                    <img src="../mapped_Image/malaysia.png" usemap="#image-map" />
+                    <!-- johor, melaka, ns, pahang, perak, selangor, terengganu, kelantan, kedah, sabah, sarawak -->
+                    <map name="image-map">
+                        <area target="_parent" onclick="display_stage(0);" alt="Johor" title="Johor" href="#johor" coords="286,461,277,487,280,493,270,493,270,504,267,512,270,521,277,533,286,537,296,544,306,549,319,559,331,565,342,587,349,577,361,573,373,571,383,574,394,577,406,578,403,569,403,558,393,540,395,532,383,512,373,495,370,482,360,478,358,493,346,486,320,487" shape="poly">
+                        <area target="_parent" onclick="display_stage(1);" alt="Melaka" title="Melaka" href="#melaka" coords="225,497,239,491,248,488,260,489,270,495,269,520,255,518,241,511" shape="poly">
+                        <area target="_parent" onclick="display_stage(2);" alt="Negeri Sembilan" title="negeri sembilan" href="#ns" coords="272,446,255,436,234,431,223,449,216,455,211,470,212,479,215,493,227,496,243,487,256,486,265,490,271,493,280,492,281,476,288,462,284,458" shape="poly">
+                        <area target="_parent" onclick="display_stage(3);" alt="Pahang" title="Pahang" href="#pahang" coords="291,309,297,318,304,329,312,337,309,350,308,359,316,364,330,373,338,376,338,362,347,358,346,368,344,380,341,389,340,395,348,415,347,436,347,453,348,469,358,477,360,488,353,488,338,487,325,489,313,482,280,455,257,439,236,430,222,425,217,417,221,408,215,396,204,388,200,372,202,364,193,354,192,341,185,334,187,323,199,325,207,328,214,322,217,313,224,316,230,323,234,315,240,311,253,319,271,308,282,313,286,309" shape="poly">
+                        <area target="_parent" onclick="display_stage(4);" alt="Perak" title="Perak" href="#perak" coords="158,226,151,246,146,251,146,261,136,263,129,272,120,274,108,274,104,281,114,297,120,309,121,318,120,336,121,345,129,352,138,363,136,369,129,372,140,379,149,380,153,385,170,393,181,391,186,385,195,390,200,384,201,363,192,351,189,341,184,335,186,322,190,300,194,290,200,267,214,264,216,254,210,244,212,234,214,228,205,219,193,221,182,229,174,242,167,243,162,236" shape="poly">
+                        <area target="_parent" onclick="display_stage(5);" alt="Selangor" title="Selangor" href="#selangor" coords="137,379,146,383,161,389,180,396,183,387,196,395,203,389,213,394,217,406,218,416,225,425,233,431,224,443,216,449,204,452,198,458,192,471,183,452,179,442,174,429,164,413,156,400,145,393" shape="poly">
+                        <area target="_parent" onclick="display_stage(6);" alt="Terengganu" title="Terengganu" href="#terengganu" coords="279,229,328,262,337,291,348,320,349,357,338,365,335,374,315,362,309,352,317,340,303,330,307,318,297,312,288,304,276,299,278,281,268,275,269,261,269,245,266,236,276,228,323,259,291,237,328,262" shape="poly">
+                        <area target="_parent" onclick="display_stage(7);" alt="Kelantan" title="Kelantan" href="#kelantan" coords="245,209,247,196,259,197,267,206,273,216,275,222,268,236,265,260,266,274,278,285,282,300,285,309,267,310,248,316,236,313,225,315,218,315,200,322,192,320,194,300,203,265,217,269,221,256,213,244,215,230,230,225,232,213" shape="poly">
+                        <area target="_parent" onclick="display_stage(8);" alt="Kedah" title="Kedah" href="#kedah" coords="92,189,109,171,118,168,128,174,138,174,147,186,162,193,171,195,164,200,166,213,159,221,156,231,148,242,143,252,144,262,125,272,110,275,108,252,105,240,104,232,106,221,103,207,102,200,99,195" shape="poly">
+                        <area target="_parent" onclick="display_stage(9);" alt="Sabah" title="Sabah" href="#sabah" coords="807,209,815,218,816,239,818,254,823,268,835,266,843,262,865,260,890,263,913,268,925,271,931,273,941,267,965,256,955,242,953,229,982,230,999,219,993,203,982,207,972,203,952,191,928,175,916,152,914,142,895,119,888,108,873,134,855,168,842,189,813,203,818,203,833,205,827,198,817,211" shape="poly">
+                        <area target="_parent" onclick="display_stage(10);" alt="Sarawak" title="Sarawak" href="#sarawak" coords="527,371,542,387,564,387,577,394,597,393,596,375,598,349,616,335,659,329,694,317,711,292,738,259,737,247,756,254,761,264,767,278,776,273,785,258,780,241,789,235,796,259,807,260,797,231,807,232,813,225,816,254,826,265,823,277,821,288,819,302,817,313,816,328,802,329,795,339,796,350,792,360,786,368,780,375,777,390,766,400,753,405,738,414,711,410,694,405,685,396,669,395,659,402,647,414,639,422,623,422,612,425,590,423,580,429,568,429,543,409,533,398,526,391,522,379,526,374" shape="poly">
+                    </map>
+                </div>
+            </div>
+        </div>
+        <script>
+            function display_map()
+            {
+
+            }
+            function clear_display(clear_data, display_data)
+            {
+                var data_id = document.getElementById(clear_data);
+                data_id.style.display = "none";
+                data_id = document.getElementById(display_data);
+                data_id.style.display = "block";
+            }
+            $(document).ready(function(){
+            $(".icon-map").click(function(){
+                data_id = document.getElementById("map");
+                if(map.style.display == "none")
+                {
+                    $("#map").fadeIn("slow");
+                    clear_display("main_content", "map");
+                }
+                else
+                {
+                    $("#main_content").fadeIn("slow");
+                    clear_display("map", "main_content");
+                }
+                $(".icon-map").toggleClass("icon-map-cross");
+            });
+            });
+            current = startSlide();
+            start_stage();
+            clear_display("map", "main_content");
+        </script>
+        <!-- Content -->
+
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="map_icons">
+        <a href="#selagor" class="icon-map" onclick="display_map();"></a>
+    </div>
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class=footer_box>
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+.realcontent{
+    min-height: 100%;
+}
+table.from_table{
+    margin: 10px auto;
+}
+fieldset.complaints{
+    margin: 20px;
+}
+div.complaints_to_us_fix{
+    width: 500px;
+    margin: auto;
+    vertical-align: middle;
+}
+div.complaints_to_us_flex{
+    min-height: 100%;
+    width: 100%;
+}
+table.from_table tbody tr td{
+    padding: 10px;
+    vertical-align: top;
+}
+input, textarea{
+    border-radius: 5px;
+    border: 1px solid;
+    width: 289px;
+    padding: 4px 10px;
+    font-family: 'dearponypersonalusebold';
+}
+div.h1_container{
+    font-size: 60px;
+    font-family: 'jackniferegular';
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+}
+label{
+    font-family:'tulip_feverregular';
+    font-size: 24px;
+}

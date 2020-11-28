@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html  class="wood">
+
+    <!--
+    Semester assginment
+     Review Assignment
+
+     Homevago project
+     Author: 
+     Date:  
+
+     Filename: Home.html
+    -->
+
+<head>
+    <title>Promotion</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+
+    
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    <!-------------------------------------- Javascript ---------------------------------->
+    <script src="../script/catogeries.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/user.js"></script>
+    <script src="../script/show_script.js"></script>
+    
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+   
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/promotion.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/small_show_style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood"> 
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li tyle="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li class="actived"><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(false); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+  
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="promotion_content">
+            <script>
+                const a_num = [4, 5];
+                const b_num = [5, 6, 8, 6, 5];
+                const c_num = [6, 4, 5, 3, 5];
+                const a_data = [6, 11];
+                const b_data = [9, 21, 7, 20, 9];
+                const c_data = [10, 27, 19, 15, 4];
+                var a_current = [0, 0];
+                var b_current = [0, 0, 0, 0, 0];
+                var c_current = [0, 0, 0, 0, 0];
+                var a_i = [0, 0];
+                var b_i = [0, 0, 0, 0, 0];
+                var c_i = [0, 0, 0, 0, 0];
+                var a_star = [3, 5];
+                var b_star = [2, 4, 5, 1, 3];
+                var c_star = [1, 3, 2, 3, 5];
+            </script>
+            <button id="defualt_page" class="tablink" onclick="openPage('HotDeals', this, '#70552f')" id="defaultOpen" style="border-top-left-radius: 10px;">Hot Deals</button>
+            <button class="tablink" onclick="openPage('Recommandation', this, '#70552f')">Recommandation</button>
+            <button class="tablink" onclick="openPage('Travel', this, '#70552f')" style="border-top-right-radius: 10px;">Travel</button>
+    
+    
+            <!-- A -->
+            <div id="HotDeals" class="tabcontent" style="border-top-left-radius: 10px;">            
+                <script>
+                    for(let j = 0; j < 2; j++)
+                    {
+                        document.write("<div class='promotion_container'><div class='row'>");
+                        var data_ref = creat_product_page(a_data[j]);
+                        document.write('<style>');
+                        for(a_i[j] = 0; a_i[j] < data_ref[data_type.number_image]; a_i[j]++)
+                        {
+                            document.write('.slide' + ((1 + a_i[j]) + '_a_' + j) + '{ background-image: url("' + data_ref[data_type.image_file] + '/' + (a_i[j] + 1) + '.jpg");}');
+                        }
+                        document.write('</style><div class="title_product"><h1>');
+                        document.write(data_ref[data_type.house_name] + "</h1></div>");
+                        
+                        document.write('<div class="row"><div class="col-sm-4"><div class="subbody subbody-promotion"><div class="wrap wrap-promotion">');
+                        document.write('<a href="single_page.html" onclick="change_current(' + data_ref[data_type.iD] + ');"><div id="slider-promotion">');
+                        for(a_i[j] = 0; a_i[j] < data_ref[data_type.number_image]; a_i[j]++)
+                        {
+                            document.write('<div class="slide slide-promotion slide' +((1 + a_i[j]) + '_a_' + j) + ' _a_' + j +'"><div class="slide-content slide-content-promotion"></div></div>');
+                        }
+                        document.write('</div></a><div class="dot_menu">');
+                        var percentage = (((300 - (20 * data_ref[data_type.number_image]))/(data_ref[data_type.number_image] + 1))/300) * 100;
+                        for(a_i[j] = 0; a_i[j] < data_ref[data_type.number_image]; a_i[j]++)
+                        {
+                            document.write('<div class="dot" onclick=on_slide_dynamic(' + (a_i[j]) + ',' + ('"_a_' + j + '"') + '); style="margin-left: ' + percentage + '%"></div>');
+                        }
+                        document.write('</div></div></div></div>');
+                        document.write('<div class="col-sm-8">');
+
+
+                                document.write('<div class="my_promotion">');
+                                    document.write('<h3>'+data_ref[data_type.area]  + ' ' + data_ref[data_type.house_unit]+'</h3>');
+                                    document.write('<div class="hidden_overflow">');
+                                        document.write('<p>' + data_ref[data_type.sample_d] + '</p>');
+                                    document.write('</div>');
+                                    document.write('<p> <span class="old_price">RM ' + data_ref[5] + '</span><span class="new_price">&nbsp;&nbsp;RM ' + (data_ref[5] * 0.8) + '</span></p>');
+                                document.write('</div>');
+                                document.write('<div class="love">');
+                                    document.write('<span class="icon-love-heart"');
+                                    if(data_ref[data_type.promotion_bool] == true){document.write(' style="color: palevioletred"');}
+                                    else{document.write(' style="color: #333"');}
+                                    document.write('></span>');
+                                document.write('</div>');
+                                
+                                document.write('<div class="footer_of_one_p">');
+                                    document.write('<div class="row" style="padding-top: 4px;">');
+                                        document.write('<div class="col-sm-2 star-star">');
+                                            write_star(a_star[j]);
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-1"><div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/shopping-cart.png" title="add to cart" alt="add to cart" width="100%" height="100%"/>');
+                                        document.write('</div></div>');
+                                        document.write('<div class="col-sm-2" style="display: flex">');
+                                        document.write('<div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/wallet.png" title="e-wallet" alt="e-wallet" width="100%" height="100%"/>');
+                                        document.write('</div>');
+                                        document.write('<div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/online-payment.png" title="online quick pay" alt="online quick pay" width="100%" height="100%"/>');
+                                        document.write('</div>');
+                                        document.write('<div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/debit-card.png" title="credit card" alt="credit card" width="100%" height="100%"/>');
+                                        document.write('</div>');
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-4">');
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-2">');
+                                        document.write('<div class="icon_pic_holder" style="display: flex;color: #222;">');
+                                            document.write('<img src="../Image/icon_png/verified.png" title="verified" alt="verified" width="100%" height="100%"/><h4 style="margin: 0;margin: 2px 5px;">verified</h4>');
+                                        document.write('</div>');
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-1">');
+                                        document.write('</div>');
+                                    document.write('</div>');
+                                document.write('</div>');
+                        
+                        document.write('</div></div>');
+                        
+                        slide_current = startSlide_dynamic('_a_' + j);
+
+    
+                        document.write("</div></div>");
+                    }
+                </script>
+            </div>
+    
+            <!-- B -->
+            <div id="Recommandation" class="tabcontent">
+                    <script>
+                        for(let j = 0; j < 5; j++)
+                        {
+                            document.write("<div class='promotion_container'><div class='row'>");
+                            var data_ref = creat_product_page(b_data[j]);
+                            document.write('<style>');
+                            for(b_i[j] = 0; b_i[j] < data_ref[data_type.number_image]; b_i[j]++)
+                            {
+                                document.write('.slide' + ((1 + b_i[j]) + '_b_' + j) + '{ background-image: url("' + data_ref[data_type.image_file] + '/' + (b_i[j] + 1) + '.jpg");}');
+                            }
+                            document.write('</style><div class="title_product"><h1>');
+                            document.write(data_ref[data_type.house_name] + "</h1></div>");
+                            
+                            document.write('<div class="row"><div class="col-sm-4"><div class="subbody subbody-promotion"><div class="wrap wrap-promotion">');
+                        document.write('<a href="single_page.html" onclick="change_current(' + data_ref[data_type.iD] + ');"><div id="slider-promotion">');
+                            for(b_i[j] = 0; b_i[j] < data_ref[data_type.number_image]; b_i[j]++)
+                            {
+                                document.write('<div class="slide slide-promotion slide' +((1 + b_i[j]) + '_b_' + j) + ' _b_' + j +'"><div class="slide-content slide-content-promotion"></div></div>');
+                            }
+                            document.write('</div></a><div class="dot_menu">');
+                            var percentage = (((300 - (20 * data_ref[data_type.number_image]))/(data_ref[data_type.number_image] + 1))/300) * 100;
+                            for(b_i[j] = 0; b_i[j] < data_ref[data_type.number_image]; b_i[j]++)
+                            {
+                                document.write('<div class="dot" onclick=on_slide_dynamic(' + (b_i[j]) + ',' + ('"_b_' + j + '"') + '); style="margin-left: ' + percentage + '%"></div>');
+                            }
+                            document.write('</div></div></div></div>');
+                            document.write('<div class="col-sm-8">');
+    
+                                    document.write('<div class="my_promotion">');
+                                            document.write('<h3>'+data_ref[data_type.area]  + ' ' + data_ref[data_type.house_unit]+'</h3>');
+                                            document.write('<div class="hidden_overflow">');
+                                                document.write('<p>' + data_ref[data_type.sample_d] + '</p>');
+                                            document.write('</div>');
+                                    document.write('<p> <span class="old_price">RM ' + data_ref[5] + '</span><span class="new_price">&nbsp;&nbsp;RM ' + (data_ref[5] * 0.8) + '</span></p>');
+                                    document.write('</div>');
+                                    document.write('<div class="love">');
+                                        document.write('<span class="icon-love-heart"');
+                                        if(data_ref[data_type.promotion_bool] == true){document.write(' style="color: palevioletred"');}
+                                        else{document.write(' style="color: #333"');}
+                                        document.write('></span>');
+                                    document.write('</div>');
+
+
+                                    document.write('<div class="footer_of_one_p">');
+                                    document.write('<div class="row" style="padding-top: 4px;">');
+                                        document.write('<div class="col-sm-2 star-star">');
+                                            write_star(b_star[j]);
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-1"><div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/shopping-cart.png" title="add to cart" alt="add to cart" width="100%" height="100%"/>');
+                                        document.write('</div></div>');
+                                        document.write('<div class="col-sm-2" style="display: flex">');
+                                        document.write('<div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/wallet.png" title="e-wallet" alt="e-wallet" width="100%" height="100%"/>');
+                                        document.write('</div>');
+                                        document.write('<div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/online-payment.png" title="online quick pay" alt="online quick pay" width="100%" height="100%"/>');
+                                        document.write('</div>');
+                                        document.write('<div class="icon_pic_holder">');
+                                            document.write('<img src="../Image/icon_png/debit-card.png" title="credit card" alt="credit card" width="100%" height="100%"/>');
+                                        document.write('</div>');
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-4">');
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-2">');
+                                        document.write('<div class="icon_pic_holder" style="display: flex;color: #222">');
+                                            document.write('<img src="../Image/icon_png/verified.png" title="verified" alt="verified" width="100%" height="100%"/><h4 style="margin: 2px 5px;">verified</h4>');
+                                        document.write('</div>');
+                                        document.write('</div>');
+                                        document.write('<div class="col-sm-1">');
+                                        document.write('</div>');
+                                    document.write('</div>');
+                                document.write('</div>');
+                            
+                            document.write('</div></div>');
+                            
+                            slide_current = startSlide_dynamic('_b_' + j);
+    
+                            document.write("</div></div>");
+                        }
+                    </script>
+            </div>
+    
+            <!-- C -->
+            <div id="Travel" class="tabcontent" style="border-top-right-radius: 10px;">
+                <script>
+                    for(let j = 0; j < 5; j++)
+                    {
+                        document.write("<div class='promotion_container'><div class='row'>");
+                        var data_ref = creat_product_page(c_data[j]);
+                        document.write('<style>');
+                        for(c_i[j] = 0; c_i[j] < data_ref[data_type.number_image]; c_i[j]++)
+                        {
+                            document.write('.slide' + ((1 + c_i[j]) + '_c_' + j) + '{ background-image: url("' + data_ref[data_type.image_file] + '/' + (c_i[j] + 1) + '.jpg");}');
+                        }
+                        document.write('</style><div class="title_product"><h1>');
+                        document.write(data_ref[data_type.house_name] + "</h1></div>");
+                        
+                        document.write('<div class="row"><div class="col-sm-4"><div class="subbody subbody-promotion"><div class="wrap wrap-promotion">');
+                        document.write('<a href="single_page.html" onclick="change_current(' + data_ref[data_type.iD] + ');"><div id="slider-promotion">');
+                        for(c_i[j] = 0; c_i[j] < data_ref[data_type.number_image]; c_i[j]++)
+                        {
+                            document.write('<div class="slide slide-promotion slide' +((1 + c_i[j]) + '_c_' + j) + ' _c_' + j +'"><div class="slide-content slide-content-promotion"></div></div>');
+                        }
+                        document.write('</div></a><div class="dot_menu">');
+                        var percentage = (((300 - (20 * data_ref[data_type.number_image]))/(data_ref[data_type.number_image] + 1))/300) * 100;
+                        for(c_i[j] = 0; c_i[j] < data_ref[data_type.number_image]; c_i[j]++)
+                        {
+                            document.write('<div class="dot" onclick=on_slide_dynamic(' + (c_i[j]) + ',' + ('"_c_' + j + '"') + '); style="margin-left: ' + percentage + '%"></div>');
+                        }
+                        document.write('</div></div></div></div>');
+                        document.write('<div class="col-sm-8">');
+
+                                document.write('<div class="my_promotion">');
+                                        document.write('<h3>'+data_ref[data_type.area]  + ' ' + data_ref[data_type.house_unit]+'</h3>');
+                                        document.write('<div class="hidden_overflow">');
+                                            document.write('<p>' + data_ref[data_type.sample_d] + '</p>');
+                                        document.write('</div>');
+                                    document.write('<p> <span class="old_price">RM ' + data_ref[5] + '</span><span class="new_price">&nbsp;&nbsp;RM ' + (data_ref[5] * 0.8) + '</span></p>');
+                                document.write('</div>');
+                                document.write('<div class="love">');
+                                    document.write('<span class="icon-love-heart ');
+                                    if(data_ref[data_type.promotion_bool] == true){document.write(' style="color: palevioletred"');}
+                                    else{document.write(' style="color: #333"');}
+                                    document.write('></span>');
+                                document.write('</div>');
+
+
+                                document.write('<div class="footer_of_one_p">');
+                                document.write('<div class="row" style="padding-top: 4px;">');
+                                    document.write('<div class="col-sm-2 star-star">');
+                                        write_star(c_star[j]);
+                                    document.write('</div>');
+                                    document.write('<div class="col-sm-1"><div class="icon_pic_holder">');
+                                        document.write('<img src="../Image/icon_png/shopping-cart.png" title="add to cart" alt="add to cart" width="100%" height="100%"/>');
+                                    document.write('</div></div>');
+                                    document.write('<div class="col-sm-2" style="display: flex">');
+                                    document.write('<div class="icon_pic_holder">');
+                                        document.write('<img src="../Image/icon_png/wallet.png" title="e-wallet" alt="e-wallet" width="100%" height="100%"/>');
+                                    document.write('</div>');
+                                    document.write('<div class="icon_pic_holder">');
+                                        document.write('<img src="../Image/icon_png/online-payment.png" title="online quick pay" alt="online quick pay" width="100%" height="100%"/>');
+                                    document.write('</div>');
+                                    document.write('<div class="icon_pic_holder">');
+                                        document.write('<img src="../Image/icon_png/debit-card.png" title="credit card" alt="credit card" width="100%" height="100%"/>');
+                                    document.write('</div>');
+                                    document.write('</div>');
+                                    document.write('<div class="col-sm-4">');
+                                    document.write('</div>');
+                                    document.write('<div class="col-sm-2">');
+                                    document.write('<div class="icon_pic_holder" style="display: flex;color: #222">');
+                                        document.write('<img src="../Image/icon_png/verified.png" title="verified" alt="verified" width="100%" height="100%"/><h4 style="margin: 2px 5px;">verified</h4>');
+                                    document.write('</div>');
+                                    document.write('</div>');
+                                    document.write('<div class="col-sm-1">');
+                                    document.write('</div>');
+                                document.write('</div>');
+                            document.write('</div>');
+                        
+                        document.write('</div></div>');
+                        
+                        slide_current = startSlide_dynamic('_c_' + j);
+
+                        document.write("</div></div>");
+                    }
+                </script>
+            </div>
+    
+            
+            <script>
+                var defualt_page = document.getElementById("defualt_page");
+                openPage('HotDeals', defualt_page, '#70552f');
+                defualt_page.style.backgroundColor = "#70552f";
+            </script>
+            <!-- Content -->
+        </div>
+        <!-------------------------------------------- CONTENT  ---------------------------------------->
+        <!---------------------------------------------------------------------------------------------->
+  
+  
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class=footer_box>
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

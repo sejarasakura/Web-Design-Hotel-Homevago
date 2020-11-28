@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+    <!--
+     New Perspectives on HTML5 and CSS3, 7th Edition
+    Semester assginment
+     Review Assignment
+
+     Homevago project
+     Author: 
+     Date:  
+
+     Filename: Home.html
+    -->
+
+<head>
+    <title>Rating and discription</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+    
+    <!-------------------------------------- Javascript ---------------------------------->
+    <script src="../script/user.js"></script>
+    <script src="../script/rating_bar.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/my_ratting.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/home.css" rel="stylesheet" type="text/css" />
+    <link href="../style/according_menu.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood"> 
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                <a href="mySetting.html">
+                    <div class="pic_content_user">
+                        <script>set_user_picture();</script>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(true); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <script>
+        var user_profile_data = get_user(-1);
+    </script>
+    <div class="content">
+    </div>
+    <div class="content" style="display:flex">
+        <!------------------------------ side navigation bar  ----------------------------->
+        <div class="according_container">
+            <div class="side_according">
+                <div class="menu">
+                    <li class="item">
+                        <a href="myAccount.html" class="btn">
+                            <span class="icon-wishlist"></span> My wish list
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myBooking.html" class="btn">
+                            <span class="icon-booking"></span> My booking
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myStatus.html" class="btn">
+                            <span class="icon-status"></span> Status
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="mySetting.html" class="btn">
+                            <span class="icon-settings-gears"></span> Setting
+                        </a>
+                    </li>
+                    <li class="item" id="reviews_menu">
+                        <a href="#reviews_menu" class="btn  btn_according_active">
+                            <span class="icon-reveiw"></span> My Reviews
+                        </a>
+                        <div class="smenu">
+                            <a href="myRating.html" class="btn_according_active">Rating and discription</a>
+                            <a href="myComplant.html">Complants</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="login.html" class="btn" onclick="logout();">
+                            <span class="icon-logout"></span> Log Out
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="realcontent">
+                <div class="header_setting">
+                    <div class="setting_block">
+                        <h1 class="setting_header"><span class="icon-half-star-active"></span> Rating and discription</h1>
+                    </div>
+                </div>
+            <div class="main_container">
+                <div class="my_profile_container">
+                    <div class="my_profile_rating">
+                        <div class="rating_profile">
+                            <div class="picture_container_holder">
+                                <div class="picture_container_rating">
+                                    <script>set_user_picture('user_picture_rating_use');</script>
+                                </div>
+                            </div>
+                            <h1 class="average_rating">2.5</h1>
+                            <h2 class="average_rating">Average Rating</h2>
+                            <h1 class="average_rating star_rating">
+                                <span class="icon-star-active"></span>
+                                <span class="icon-star-active"></span>
+                                <span class="icon-half-star-active"></span>
+                                <span class="icon-star-empty"></span>
+                                <span class="icon-star-empty"></span>
+                            </h1>
+                        </div>
+                        <div class="fix_rating_content">
+                            <div class="bar-container">
+                                <div class="row">
+                                    <script>
+                                        generate_rating_bar(44.11, 29.41, 11.76, 4.9, 9.8);
+                                        rating_col(450, 5);
+                                        rating_col(300, 4);
+                                        rating_col(120, 3);
+                                        rating_col(50, 2);
+                                        rating_col(100, 1);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command_and_rating">
+
+
+                    <div class="fix_command_and_rating">
+                        <div class="command_container">
+                            <div class="rating_header_container">
+                                <div class="rating_pic_cmd_container">
+                                    <div class="fix_image_cmd">
+                                        <script>
+                                            write_user_img("user_picture_rating_use", user_2);
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="rating_detail_cmd">
+                                    <div class="rating_detail_cmd_fix">
+                                        <h3>3 hours ago</h3>
+                                        <h3><script>document.write(user_2[0])</script></h3>
+                                        <h3 class="star_rating">
+                                            Rating <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-half-star-active"></span>
+                                            <span class="icon-star-empty"></span>
+                                            <span class="icon-star-empty"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating_content_p">
+                                <blockquote class="rating_blockquote">
+                                        The student introduces technology as a whole, looking at its history, from how it has grown from a simple form of communication through letters to today’s extensive choice of communication through electronic gadgets. This is a great way to start your introduction. Based on the question, explain what the issue is and give a brief background of its past and present. State your opinion as to why such situation arises.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="fix_command_and_rating">
+                        <div class="command_container">
+                            <div class="rating_header_container">
+                                <div class="rating_pic_cmd_container">
+                                    <div class="fix_image_cmd">
+                                        <script>
+                                            write_user_img("user_picture_rating_use", user_7);
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="rating_detail_cmd">
+                                    <div class="rating_detail_cmd_fix">
+                                        <h3>13 hours ago</h3>
+                                        <h3><script>document.write(user_7[0])</script></h3>
+                                        <h3 class="star_rating">
+                                            Rating <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-half-star-active"></span>
+                                            <span class="icon-star-empty"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating_content_p">
+                                <blockquote class="rating_blockquote">
+                                        First and foremost, the world today is turning more to electronic communications like e-mail, Facebook and instant messaging, and other electronic communications because they will prevent people from wasting their time and money. How do these work? As we all know, sending a letter to someone will involve a lot of processes and will eventually take a long time and waste a lot of money. On the contrary, electronic communications entail only the tip of our fingers and an electronic device to work with. Then, what is left for us to do is just, typing. Has that not taken a much less time and money? For instance, an e-mail only requires us to turn on our laptops, open our accounts on the website and then, you can start writing your letter and sending them through e-mail. In short, with the very unstable economy nowadays, having these kinds of communications will ease everyone’s burden especially with their daily expenses and also their valuable time will not be wasted.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                        
+
+                    <div class="fix_command_and_rating">
+                        <div class="command_container">
+                            <div class="rating_header_container">
+                                <div class="rating_pic_cmd_container">
+                                    <div class="fix_image_cmd">
+                                        <script>
+                                            write_user_img("user_picture_rating_use", user_12);
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="rating_detail_cmd">
+                                    <div class="rating_detail_cmd_fix">
+                                        <h3>1 day ago</h3>
+                                        <h3><script>document.write(user_12[0])</script></h3>
+                                        <h3 class="star_rating">
+                                            Rating <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-star-empty"></span>
+                                            <span class="icon-star-empty"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating_content_p">
+                                <blockquote class="rating_blockquote">
+                                        State, Explain and then Illustrate. Remember SEI. First, state the topic that’s been mentioned. In this case, it’s the rise of electronic communications. Then explain. Explain what electronic communications entail. Next, illustrate. This means give examples based on your explanation. The student illustrates by giving a scenario of the use of emails.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fix_command_and_rating">
+                        <div class="command_container">
+                            <div class="rating_header_container">
+                                <div class="rating_pic_cmd_container">
+                                    <div class="fix_image_cmd">
+                                        <script>
+                                            write_user_img("user_picture_rating_use", user_3);
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="rating_detail_cmd">
+                                    <div class="rating_detail_cmd_fix">
+                                        <h3>1 day 5 hours ago</h3>
+                                        <h3><script>document.write(user_3[0])</script></h3>
+                                        <h3 class="star_rating">
+                                            Rating <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-star-active"></span>
+                                            <span class="icon-half-star-active"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating_content_p">
+                                <blockquote class="rating_blockquote">
+                                        Soooo pissed off! Re: Hotel booking through Trivago and Loveholidays • info@e-loveholidays.com #Trivago #LoveHolidays #LoveVacations #Fraud #Scam I tried to book a hotel using Trivago. They booked it through Lovevacations, I called the hotel to let them know I'd be arriving late and they did not have my reservation. I checked my bank account and the money was taken out for the booking. I then contacted Lovevacations, they told me that the hotel did not have any rooms left. I cannot imagine why they would book the room and charge me if the hotel was already booked full.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class=footer_box>
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

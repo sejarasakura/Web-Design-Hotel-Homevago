@@ -1,0 +1,207 @@
+
+
+.rg-container {
+font-family: 'Lato', Helvetica, Arial, sans-serif;
+font-size: 16px;
+line-height: 1.4;
+margin: 0;
+color: #222;
+}
+.rg-header {
+margin-bottom: 1em;
+text-align: left;
+}
+
+/* table */
+table.rg-table {
+width: 100%;
+font-size: 1em;
+}
+table.rg-table tr {
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+text-align: left;
+color: #333;
+}
+table.rg-table thead {
+border-bottom: 3px solid #ddd;
+}
+table.rg-table tr {
+border-bottom: 1px solid #ddd;
+color: #222;
+}
+table.rg-table tr.highlight {
+background-color: #dcf1f0 !important;
+}
+table.rg-table.zebra tr:nth-child(even) {
+background-color: #f6f6f6;
+}
+table.rg-table th {
+font-weight: bold;
+}
+table.rg-table .highlight td {
+font-weight: bold;
+}
+table.rg-table th.number,
+td.number {
+text-align: right;
+}div.fix_conctent_table{
+    height: 100%;
+    margin: auto;
+    border: 15px outset #806646ee;
+    border-radius: 13px;
+}
+.rg-container {
+    overflow-x: auto;
+    overflow-y: hidden; 
+}
+@media (min-width: 500px) and (max-width: 849.98px) {
+    table.rg-table th, table.rg-table td  {
+        font-size: 0.6em;
+        padding: 0.55em 0;
+    }
+    div.fix_conctent_table{
+        width: 500px;
+    }
+    .rg-container {
+    padding: 1em 0.5em;
+    }
+    table.rg-table {
+        width: 90% !important;
+    }
+}
+@media (min-width: 850px) and (max-width: 1199.98px) {
+    table.rg-table th, table.rg-table td  {
+        font-size: 0.9em;
+        padding: 0.35em;
+    }
+    div.fix_conctent_table{
+        width: 90%;
+    }
+    .rg-container {
+    padding: 2em 0.5em;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+    table.rg-table th, table.rg-table td  {
+    font-size: 1.15em;
+    padding: 0.45em;
+    }
+    div.fix_conctent_table{
+        width: 900px;
+    }
+    .rg-container {
+    padding: 3em 0.5em;
+    }
+}
+@media (min-width: 1600px) and (max-width: 2599.98px) {
+    table.rg-table th, table.rg-table td  {
+    font-size: 1.50em;
+    padding: 0.45em;
+    }
+    div.fix_conctent_table{
+        width: 1200px;
+    }
+    .rg-container {
+    padding: 4.5em 0.5em;
+    }
+}
+/* media queries */
+@media screen and (max-width: 600px) {
+    .rg-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    table.rg-table {
+        width: 100%;
+    }
+    table.rg-table thead {
+        display: none;
+    }
+    table.rg-table tbody {
+        width: 100%;
+    }
+    table.rg-table tr,
+    table.rg-table th,
+    table.rg-table td {
+        display: block;
+        padding: 0;
+    }
+    table.rg-table tr {
+        border-bottom: none;
+        margin: 0 0 1em 0;
+        padding: 0.5em;
+    }
+    table.rg-table tr.highlight {
+        background-color: inherit !important;
+    }
+    table.rg-table.zebra tr:nth-child(even) {
+        background-color: transparent;
+    }
+    table.rg-table.zebra td:nth-child(even) {
+        background-color: #f6f6f6;
+    }
+    table.rg-table tr:nth-child(even) {
+        background-color: transparent;
+    }
+    table.rg-table td {
+        padding: 0.5em 0 0.25em 0;
+        border-bottom: 1px dotted #ccc;
+        text-align: right;
+    }
+    table.rg-table td[data-title]:before {
+        content: attr(data-title);
+        font-weight: bold;
+        display: inline-block;
+        content: attr(data-title);
+        float: left;
+        margin-right: 0.5em;
+        font-size: 0.95em;
+    }
+    table.rg-table td:last-child {
+        padding-right: 0;
+        border-bottom: 2px solid #ccc;
+    }
+    table.rg-table td:empty {
+        display: none;
+    }
+    table.rg-table .highlight td {
+        background-color: inherit;
+        font-weight: normal;
+    }
+}
+
+table.status_table_style {
+    border: 1px solid #31251a;
+    text-align: center;
+    border-collapse: collapse;
+    background: #bc936088;
+  }
+  table.status_table_style td, table.status_table_style th {
+    border: 1px solid #31251a;
+  }
+  table.status_table_style tbody td, table.status_table_style tfoot td {
+  font-size: 100%;
+  }
+  table.status_table_style tr:nth-child(even) {
+    background: #e1ceb8dd;
+  }
+  table.status_table_style thead {
+    background: #5a4526;
+    border-bottom: 5px solid #31251a;
+  }
+  table.status_table_style thead th {
+    font-size: 120%;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 1px solid #31251a;
+  }
+  table.status_table_style thead th:first-child {
+    border-left: none;
+  }

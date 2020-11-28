@@ -1,0 +1,487 @@
+﻿@charset "utf-8";
+
+
+body footer {
+    color: #331a00;
+    width: 100%;
+    background-image: url(../Image/simple_background/blue_b.jpg);
+    background-size: cover;
+}
+
+body footer hr {
+    color: #663300;
+    background-color: #663300;
+    margin: 0px 1px 5px 1px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+@media screen and (max-width : 700px) {
+
+        
+    body footer {
+        height: 600px
+    }
+
+    body footer div.container div.information p {
+        margin: 1px 1px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    body footer div.container {
+        width: 100%;
+        height: 150px;
+        margin: 0px auto auto auto;
+    }
+
+    body footer div.container > .information {
+        display: inline-block;
+        margin: 0 5%;
+        vertical-align: top;
+    }
+
+    body footer div.container div.shor, body footer div.container > .information, body footer div.container div.long {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    body footer hr.vertical {
+        height: 1px;
+        width: 98%;
+        display: block;
+        background-color: #663300;
+        margin: 1px 1%;
+    }
+
+    body footer div.container div.footer_box {
+        width: 70%;
+        height: 140px;
+        vertical-align: top;
+        margin: auto;
+        padding: 0;
+        border: 0;
+    }
+    body footer div.container div.footer_box div.footer_image_box {
+        width: 100%;
+        height: 90px; 
+        vertical-align: top;
+        margin: auto;
+        padding: 0;
+        border: 0;
+    }
+    body footer div.container div.footer_box div.share_social ul{
+        margin: auto 14.70588235% !important;
+    }
+    body footer div.container div.footer_box div.share_social{
+        height: 40px !important;
+    }
+}
+
+@media screen and (min-width : 700px) {
+
+    body footer {
+        height: 300px
+    }
+    body footer div.container div.information p {
+        margin: 1px 1px 1px 1px;
+        font-size: 15px;
+    }
+
+    body footer div.container {
+        width: 100%;
+        height: 150px;
+        margin: 0px auto auto auto;
+    }
+
+    body footer div.container div.information {
+        display: inline-block;
+        height: 90%;
+        margin-left: 0.74128984%;
+        margin-top: 0px;
+        vertical-align: top;
+    }
+    body footer div.container div.short {
+        width: 26%;
+    }
+    body footer div.container div.long {
+        width: 40%;
+    }
+
+    body footer hr.vertical {
+        height: 1px;
+        width: 98%;
+        display: block;
+        background-color: #663300;
+        margin: 1px;
+    }
+
+    body footer div.container div.footer_box {
+        width: 240px;
+        height: 100px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 15%;
+        padding: 0;
+        border: 0;
+        
+    }
+    body footer div.container div.footer_box div.footer_image_box {
+        width: 280px;
+        height: 70px;
+        vertical-align: top;
+        margin: 0px 0;
+        padding: 0;
+        border: 0;
+    }
+}
+@media screen and (min-width : 800px) {
+    
+    body footer {
+        height: 170px
+    }
+    body footer div.container div.information p {
+        margin: 2px 2px 2px 2px;
+        font-size: 13px;
+    }
+
+    body footer div.container {
+        width: 100%;
+        height: 150px;
+        margin: 0px auto auto auto;
+    }
+
+    body footer div.container div.information {
+        display: inline-block;
+        height: 90%;
+        margin-left: 0.74128984%;
+        margin-top: 0px;
+        vertical-align: top;
+    }
+
+    body footer div.container div.short {
+        width: 15%;
+    }
+
+    body footer div.container div.long {
+        width: 25%;
+    }
+
+    body footer hr.vertical {
+        width: 2px;
+        height: 93%;
+        display: inline-block;
+        background-color: #663300;
+        margin: 1px;
+    }
+
+    body footer div.container div.footer_box {
+        width: 20.0148%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body footer div.container div.footer_box div.footer_image_box {
+        width: 100%;
+        height: 50%;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+@media screen and (min-width : 1100px) {
+    
+    body footer {
+        height: 220px
+    }
+    body footer div.container div.information p {
+        margin: 2px 2px 2px 2px;
+        font-size: 16px;
+    }
+
+    body footer div.container {
+        width: 100%;
+        height: 140px;
+        margin: 0px auto auto auto;
+    }
+
+    body footer div.container div.information {
+        display: inline-block;
+        height: 90%;
+        margin-left: 0.74128984%;
+        margin-top: 0px;
+        vertical-align: top;
+    }
+
+    body footer div.container div.short {
+        width: 15%;
+    }
+
+    body footer div.container div.long {
+        width: 25%;
+    }
+
+    body footer hr.vertical {
+        width: 2px;
+        height: 93%;
+        display: inline-block;
+        background-color: #663300;
+        margin: 1px;
+    }
+
+    body footer div.container div.footer_box {
+        width: 20.0148%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body footer div.container div.footer_box div.footer_image_box {
+        width: 100%;
+        height: 50%;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+}
+
+
+
+@media screen and (min-width : 1300px) {
+    body footer div.container div.information p {
+        margin: 3px 3px 3px 3px;
+        font-size: 19px;
+    }
+
+    body footer div.container {
+        width: 100%;
+        height: 180px;
+        margin: 0px auto auto auto;
+    }
+
+    body footer div.container div.information {
+        display: inline-block;
+        height: 90%;
+        margin-left: 0.74128984%;
+        margin-top: 0px;
+        vertical-align: top;
+    }
+
+    body footer div.container div.short {
+        width: 15%;
+    }
+
+    body footer div.container div.long {
+        width: 25%;
+    }
+
+    body footer hr.vertical {
+        width: 2px;
+        height: 93%;
+        display: inline-block;
+        color: #663300;
+        background-color: #663300;
+        margin: 1px 0.37064493% 1px 0.37064493%;
+    }
+
+    body footer div.container div.footer_box {
+        width: 20.0148%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body footer div.container div.footer_box div.footer_image_box {
+        width: 100%;
+        height: 50%;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+@media screen and (min-width : 1500px) {
+    body footer div.container div.information p {
+        margin: 4px 4px 4px 4px;
+        font-size: 22px;
+    }
+
+    body footer div.container {
+        width: 100%;
+        height: 210px;
+        margin: 0px auto auto auto;
+    }
+
+    body footer div.container div.information {
+        display: inline-block;
+        height: 90%;
+        margin-left: 0.74128984%;
+        margin-top: 0px;
+        vertical-align: top;
+    }
+
+    body footer div.container div.short {
+        width: 15%;
+    }
+
+    body footer div.container div.long {
+        width: 25%;
+    }
+
+    body footer hr.vertical {
+        width: 2px;
+        height: 93%;
+        display: inline-block;
+        color: #663300;
+        background-color: #663300;
+        margin: 1px 0.37064493% 1px 0.37064493%;
+    }
+
+    body footer div.container div.footer_box {
+        width: 20.0148%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body footer div.container div.footer_box div.footer_image_box {
+        width: 100%;
+        height: 50%;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+@media screen and (min-width : 1300px) {
+    body footer div.container div.footer_box div.share_social {
+        font-family: sans-serif;
+        height: 50%
+    }
+    body footer div.container div.footer_box div.share_social ul{
+        position: absolute;
+        margin: 20px 1.5947368421% 0px 1.5947368421%;
+        padding: 0;
+        display: flex;
+        width: 320px;
+        height: 60px
+    }
+    body footer div.container div.footer_box div.share_social ul:before{
+        content: "\e954";
+        font-family: 'icomoon';
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(45deg, #ff00ff, #8a2be2);
+        border-radius: 29px;
+        height: 100%;
+        margin: 0px 1.5947368421% 0px 1.5947368421%;
+        font-size: 30px;;
+        margin: 0px 4px;
+        padding-right: 2px;
+        transition: 0.5s;
+        text-align: center;
+        line-height: 58px;
+    }
+    body footer div.container div.footer_box div.share_social ul:hover:before{
+        width: 58px;
+    }
+    body footer div.container div.footer_box div.share_social ul li{
+        list-style: none;
+        transition: 1s;
+        border-radius: 50%;
+        line-height: 58px;
+        margin: 0 4px;
+    }
+    body footer div.container div.footer_box div.share_social ul li a{
+        display: block;
+        width: 58px;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+        color: #fff;
+        font-size: 29px;
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (max-width : 1300px){
+    body footer div.container div.footer_box div.share_social {
+        font-family: sans-serif;
+        height: 50%
+    }
+    body footer div.container div.footer_box div.share_social ul{
+        position: absolute;
+        margin: 20px 1.5947368421% 0px 1.5947368421%;
+        padding: 0;
+        display: flex;
+        width: 240px;
+        height: 40px;
+    }
+    body footer div.container div.footer_box div.share_social ul:before{
+        content: "\e954";
+        font-family: 'icomoon';
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(45deg, #ff00ff, #8a2be2);
+        border-radius: 29px;
+        height: 100%;
+        margin: 0px 1.5947368421% 0px 1.5947368421%;
+        font-size: 20px;;
+        margin: 0px 4px;
+        padding-right: 2px;
+        transition: 0.5s;
+        text-align: center;
+        line-height: 40px;
+    }
+    body footer div.container div.footer_box div.share_social ul:hover:before{
+        width: 40px;
+    }
+    body footer div.container div.footer_box div.share_social ul li{
+        list-style: none;
+        transition: 1s;
+        border-radius: 50%;
+        height: 40px;
+        margin: 0 4px;
+    }
+    body footer div.container div.footer_box div.share_social ul li a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+
+body footer div.container div.footer_box div.share_social ul li:nth-child(1){
+    background: #0077B5;
+}
+body footer div.container div.footer_box div.share_social ul li:nth-child(2){
+   background: #55acee;
+}
+body footer div.container div.footer_box div.share_social ul li:nth-child(3){
+   background: #dd4b39;
+}
+body footer div.container div.footer_box div.share_social ul li:nth-child(4){
+   background: #3b5999;
+}
+body footer div.container div.footer_box div.share_social ul li:nth-child(5){
+   background: #e4405f;
+}

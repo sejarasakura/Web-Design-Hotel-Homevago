@@ -1,0 +1,180 @@
+
+@charset "utf-8";
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  box-sizing: border-box;
+  background-color: #555;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #423a0199;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.333333%;
+  box-sizing: border-box;
+  border-bottom: 2px solid #70552f;
+}
+
+.tablink:hover {
+  background-color: #423a01aa;
+  box-sizing: border-box;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #0000;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+div.promotion_content{
+  margin: 20px auto 20px auto;
+  border-radius: 10px;
+  border: 2px solid #70552f;
+  border-radius: 15px;
+  max-width: 1106px!important;
+}
+.star-star{
+	font-size: 20px!important;
+}
+
+div.icon_pic_holder{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+img.maxsize{
+	height: 100%;
+	width: 100%;
+}
+
+div.promotion_all {
+    width: 98%;
+    margin: 0% 1% 0% 1%;
+}
+
+div.promotion_one{
+  margin:20px;
+}
+
+.footer_of_one_p{
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+.love-none-active{
+  color: #333;
+}
+
+.love-active{
+  color: palevioletred;
+}
+
+div.promotion_one_upper_part{
+    background-color: rgba(221, 184, 16, 0.952); 
+    height: 50px;
+}
+div.promotion_one_down_part{
+    background-color:orange;
+}
+
+h1 {
+    color:black;
+    padding: 10px 6.5px;
+}
+
+div.promotion_details{
+    position: right;
+    color: black;
+    margin: 50px;
+}
+
+#HotDeals{
+  box-sizing: border-box;
+}
+
+#Recommandation {
+  box-sizing: border-box;
+}
+
+#Travel {
+  box-sizing: border-box;
+}
+
+table.promotion_element{
+  border: #cc6600 1px solid;
+}
+
+.promotion_image{
+  height: 140px;
+  width: 140px;
+  margin: 12px 37.5px;
+}
+.promotion_container{
+  margin: 10px auto!important;
+}
+.title_product h1{
+  margin-left: 30px!important;
+}
+.hidden_overflow{
+  overflow: hidden!important;
+}
+.my_promotion{
+  color: black;
+}
+.col-sm-8{
+  border: 1px solid #654d2a;
+  margin-left: -25px;
+  min-height: 200px;
+  max-height: 200px;
+}
+.love{
+  color: palevioletred;
+  font-size:20px;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: translate(50%, -50%);
+  margin: 10px;
+  cursor: pointer;
+}
+.old_price{
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  word-spacing: -0.2px;
+  color: #FF0B0B;
+  font-weight: 400;
+  text-decoration: line-through solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+.new_price{
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  word-spacing: -0.2px;
+  color: #444444;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}

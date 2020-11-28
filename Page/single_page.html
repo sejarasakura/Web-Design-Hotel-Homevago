@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+    <!--
+     New Perspectives on HTML5 and CSS3, 7th Edition
+    Semester assginment
+     Review Assignment
+
+     Homevago project
+     Author: 
+     Date:  
+
+     Filename: Home.html
+    -->
+
+<head>
+    <title>Product</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+    
+    <!--------------------------------- Bootstarp ---------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/show_script.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/user.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/small_show_style.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/product.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood">
+
+
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+            <div class="upper_part_header">
+                <div class="left">
+                    <a href="Home.html">
+                        <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                    </a>
+                </div>
+                <div class="right" id="header_user_right_icon">
+                    <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                    <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+                </div>
+                <div class="right" id="header_user_right_pic">
+                        <a href="mySetting.html">
+                            <div class="pic_content_user">
+                                <script>set_user_picture();</script>
+                            </div>
+                        </a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                    <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                    <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                    <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                    <script> write_setting_li(false); </script>
+                </ul>
+            </nav>
+            <script> re_right(); </script>
+        </header>
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="pro_content content">
+        <script>
+            var data_ref = creat_product_page(0);
+            var slide_current, slide_i;
+            document.write('<style>');
+            for(slide_i = 0; slide_i < data_ref[data_type.number_image]; slide_i++)
+            {
+                document.write('.slide' + (1 + slide_i) + '{ background-image: url("' + data_ref[data_type.image_file] + '/' + (slide_i + 1) + '.jpg");}');
+            }
+            document.write('</style><div class="title_product"><h1>');
+            document.write(data_ref[data_type.house_name] + "</h1></div>");
+        </script>
+            <div class="subbody subbody-a">
+                <div class="wrap wrap-a">
+                    <div id="arrow-left" class="arrow" title="Previous" onclick="slideLeft();"></div>
+                    <div id="arrow-right" class="arrow" title="Next" onclick="slideRight();"></div>
+                    <div id="slider-a">
+                        <script>
+                            for(slide_i = 0; slide_i < data_ref[data_type.number_image]; slide_i++)
+                            {
+                                document.write('<div class="slide slide-a slide' + (slide_i + 1) + '"><div class="slide-content slide-content-a"></div></div>');
+                            }
+                        </script>
+                    </div>
+                    <div class="dot_menu">
+                        <script>
+                            var percentage = (((300 - (20 * data_ref[data_type.number_image]))/(data_ref[data_type.number_image] + 1))/300) * 100;
+                            for(slide_i = 0; slide_i < data_ref[data_type.number_image]; slide_i++)
+                            {
+                                document.write('<div class="dot" onclick=on_slide(' + (slide_i) + '); style="margin-left: ' + percentage + '%"></div>');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        <div class="content_product row">
+            <div class="half_sub_content col-sm-6">
+                <script>
+                    document.write('<div class="mapouter"><div class="gmap_canvas">');
+                    document.write('<iframe width="100%" height="100%" id="gmap_canvas" src=' + data_ref[data_type.map_link] + 
+                    ' frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>');
+                </script>
+            </div>
+            <div class="half_sub_content col-sm-6">
+                <table class="catergory_element">
+                    <colgroup>
+                        <col style="width: 150px;">
+                        <col style="width: 10px;">
+                        <col style="width: 500px;">
+                    </colgroup>
+                    <script>
+                    document.write('<tbody><tr><td>price/day </td><td class="central_semi">:</td><td>RM ' + data_ref[data_type.price].toFixed(2) + '</td></tr>');
+                    document.write('<tr><td>Country </td><td class="central_semi">:</td><td>' + data_ref[data_type.country]  + ' ' + data_ref[data_type.stage] + '</td></tr>');
+                    document.write('<tr><td>Position </td><td class="central_semi">:</td><td>' + data_ref[data_type.area]  + ' ' + data_ref[data_type.house_unit] + '</td></tr>');
+                    document.write('<tr><td>Discription </td><td class="central_semi">:</td><td>' + data_ref[data_type.sample_d]  + ' ' + data_ref[data_type.detail_d] + '</td></tr></tbody>');
+                    </script>
+                </table>
+            </div>
+        </div>
+        <div class="subfooter_next_pre"  style="display: flex;">
+            <div class="half_subfooter next">
+                <div class="btn_subfooter">
+                    <a href="../Page/single_page.html" onclick="change_current_next();">
+                        <div class="next_pre_btn">
+                            Pre
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="half_subfooter pre">
+                <div class="btn_subfooter">
+                    <a href="../Page/single_page.html" onclick="change_current_pre();">
+                        <div class="next_pre_btn">
+                            Next
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        slide_current = startSlide();
+    </script>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+
+
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

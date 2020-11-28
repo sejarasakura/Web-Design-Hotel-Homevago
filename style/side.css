@@ -1,0 +1,112 @@
+﻿@charset "utf-8";
+
+
+@media screen and (min-width : 1000px){
+    .icons {
+        position: fixed;
+        top: 30%;
+        right: 0%;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+    }
+
+    .icons a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 22px;
+        border-radius: 50px 0px 0px 50px;
+        transition: all 0.7s;
+        margin: 2px;
+        transform: translate(140px, 0px);
+        font-family: 'Oswald', sans-serif;
+        text-align: left;
+    }
+
+    .icons a i {
+        margin-right: 25px;
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        color: black;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+    }
+
+}
+@media screen and (max-width : 1000px) {
+
+    .icons {
+        position: fixed;
+        top: 25%;
+        right: 0%;
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        margin: 1px;
+    }
+
+    .icons a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 50px 0px 0px 50px;
+        transition: all 0.7s;
+        margin: 1px;
+        transform: translate(120px, 0px);
+        font-family: 'Oswald', sans-serif;
+        text-align: left;
+    }
+
+    .icons a i {
+        margin-right: 25px;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        color: black;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+    }
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    height: 100%;
+}
+.icons a:hover {
+    transform: translate(0px, 0px);
+}
+.icons a:hover i{
+    transform: rotate(360deg);
+}
+.icons a i.fa-comments {
+    color: #668cff;
+    background-image: linear-gradient(to bottom, #ffffff, #aaaaaa);
+}
+.icons a i.fa-info-circle {
+    color: #1a1aff;
+    background-image: linear-gradient(to bottom, #ffffff, #aaaaaa);
+}
+.icons a i.fa-headset {
+    color: #29a329;
+    background-image: linear-gradient(to bottom, #ffffff, #aaaaaa);
+}
+div.icons a.forum {
+    background-image: linear-gradient(to bottom, #668cff, #295dfd);
+    color: white;
+}
+div.icons a.help {
+    background-image: linear-gradient(to bottom, #1a1aff, #4200ba);
+    color: white;
+}
+div.icons a.findUs {
+    background-image: linear-gradient(to bottom, #1def1d, #05a205);
+    color: white;
+}

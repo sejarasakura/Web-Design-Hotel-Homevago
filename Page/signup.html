@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+ Semester assginment
+ Review Assignment
+
+ Homevago project
+ Author: 
+ Date:   
+
+ Filename: signup.html
+-->
+
+<head>
+    <title>Sign-up homevago</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="keyword" content="Hotel, Homevago, Home, Stay, Sleep, Host, sign-up" />
+
+    
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/manage_account.js"></script>
+    <script src="../script/user.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/form.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body>
+
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script> write_setting_li(false); </script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="sign_up_content">
+        <div class="agreement">
+            <h1>
+                Sign up Homevago
+            </h1>
+            <h3>
+                General Terms &amp; Conditions Homevago Homestay Manager
+            </h3>
+            <blockquote>
+                <ol> 
+                    <li>
+                        Scope of Application, homevago N.V., Kesselstraße 5 – 7, 40221 Düsseldorf, Dutch Trade Register No.: 67222927 (henceforth "homevago"), in addition to the worldwide hotel price comparison and the travel community, runs a hotel databank on their websites in which hoteliers can register their hotels.<br />
+                        Homevago Homestay Manager is offered exclusively to persons of legal age that are hotel owners, hotel operators and/or authorized employees of a hotel (henceforth "hotelier").<br />
+                        These terms and conditions are valid for all services that homevago provides hoteliers in connection with the entries in the hotel databank on homevago Hotel Manager. The hotelier will be notified of changes to these terms and conditions in their account. Subsidiary agreements, amendments and supplements must be confirmed in writing by homevago.
+                    </li>
+                    <li>
+                        Subject and Term of Contract - Hotel Manager, The subject of the contract is the hotel entry and the touristic offer or amendment of the current hotelier’s hotel listing in the online homevago hotel databank (Hotel Manager) on the homevago websites.<br />
+                        The contractual relationship is a result of the hotelier registering online at www.homevago.com/hotelmanager. The hotelier must register with the requested data in the registration form on homevago Hotel Manager. After completing the registration, the activation of the homevago Hotel Manager account will follow.<br />
+                        homevago reserves the right to develop, amend and update the design, functionality and abilities of homevago Hotel Manager from time to time, as well as make adjustments to the software. trivago will inform the hotelier about these instances in their account as well as by email. homevago does not take responsibility for the error-free usage of the homevago websites.<br />
+                    </li>
+                    <li> 
+                        Reviews from the cooperating partners of trivago are available and published on the trivago websites as additional information to the respective hotels. This applies exclusively to reviews from third parties on which trivago and the hotelier have no influence and accordingly do not claim rights. The hotelier does not have the right to demand the deletion of reviews provided that there are no statutory provisions stating otherwise.
+                    </li>
+                    <li>
+                        The hotelier guarantees that the domain name which is linked does not infringe upon the brand of another company nor is trademarked. In the event that a case is made against these rights by a third party, the hotelier will not hold trivago liable for indemnification.<br />
+                        There shall be no claims against trivago due to linking. The hotelier is obligated to immediately inform trivago about changes to the given URL under the terms of contract in written form (email will be considered sufficient), so that the entry on the trivago domains always links to the correct hotel URL.
+                    </li>
+                    <li>
+                        If the hotelier makes use of the possibility to create an account on trivago, we will collect, process, and store personal data as a part of the process of setting up an account. As a first step, we will only collect the hotelier's email address and his/her year of birth. It is also possible to open an account under a pseudonym. Moreover, the hotelier has the possibility to give us more personal data, like name, gender, address, and residence.<br />
+                        trivago uses Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics uses "cookies," which are text files placed on the computer to help the website analyze how visitors use the site. The information generated by the cookie about the hotelier's use of the website will be transmitted to and stored by Google on servers in the United States. In case of activation of the IP anonymization, Google will truncate/anonymize the last octet of the IP address for Member States of the European Union as well as for other parties to the Agreement on the European Economic Area. 
+                    </li>
+                    <li>
+                        Licenses <br />
+                        The hotelier reserves the rights to any content that he/she uploads and publishes on the websites of trivago. The hotelier grants trivago a temporally and spatially unlimited, non-exclusive, transferable, sub-licensable, royalty-free license to use any content which he uploads via the Hotel Manager on websites of trivago. In this context content includes especially, but without limitation, pictures, videos, texts, and information.<br />
+                    </li>
+                    <li>
+                        Liability and Indemnification<br />
+                        The hotelier is fully responsible for the content of his/her internet presence on the websites of trivago. They are also responsible for the content of the website that is linked on trivago via the URL added by the hotelier. The hotelier is liable for any violation against legal provisions and/or good morals. After concrete evidence is received, trivago will delete content that violates valid rights and/or good morals, immediately terminate the contractual relationship to the creator of the content and make claims for damages against the owner of this content.
+                    </li>
+                </ol> 
+            </blockquote>
+        </div>
+        <div class="sign_up_vertical">
+
+        </div>
+        <div class="register">
+            <form method="post" class="register_from" onsubmit="return validate_sign(this)">
+                <br /><h2>Sign-up a new account</h2><br />
+                <label>Name :</label><br />
+                <input type="text" name="frist" placeholder="Enter your frist name" maxlength="15" />
+                <input type="text" name="last" placeholder="Enter your last name" maxlength="15" /><br /><br />
+                <label>Username :</label><br />
+                <input type="text" name="username" placeholder="Enter username" maxlength="20" /><br /><br />
+                <label>Password :</label><br />
+                <input type="password" name="password" placeholder="New password" /><br /><br />
+                <input type="password" name="cpassword" placeholder="Confirm password" /><br /><br />
+                <label>Phone number :</label><br />
+                <select class="select_phone" name="phone1">
+                    <option value=""> ~ </option>
+                    <option value="+12">+12</option>
+                    <option value="+13">+13</option>
+                    <option value="+32">+32</option>
+                    <option value="+34">+34</option>
+                    <option value="+60">+60</option>
+                    <option value="+68">+68</option>
+                    <option value="+69">+69</option>
+                    <option value="+76">+76</option>
+                    <option value="+85">+85</option>
+                    <option value="+87">+87</option>
+                    <option value="+95">+95</option>
+                </select>
+                <input type="tel" name="phone2" id="name" placeholder="Mobile phone number" maxlength="10" style="width:33.7%" pattern="[0-9]{9/8}"/><br /><br />
+                <label>Birthday Date :</label><br />
+                <input type="number" name="date_day" placeholder="day " max="31" min="0" style="width:10%; margin-right: 3.2%" />
+                <input type="number" name="date_month" placeholder="month" max="12" min="0" style="width:10%; margin-right: 3.2%" />
+                <input type="number" name="date_year" placeholder="year " max="2100" min="2000" style="width:10%" />
+                <br /><br />
+                <label>Gender :</label><br />
+                <div class="submit_box">
+                    <p style="text-align: center; vertical-align: middle; width: 250px; margin-top: 5px;">I have no account</p>
+                    <a href="login.html"><input type="button" value="Log In" style="border-color: #ff0000; background-color: #ff000099" /></a>
+                    <input type="submit" value="Sign Up" style="border-color:#00ff00; background-color: #00ff0099;" />
+                </div>
+                <div class="genderbox">
+                    <input type="radio" name="gender" value="f" class="gender" /><p> Female</p>
+                </div>
+                <div class="genderbox">
+                    <input type="radio" name="gender" value="m" class="gender" /><p> Male</p>
+                </div>
+                <br />
+                <br />
+                <label>Country</label><br />
+                <select class="select_contry" name="country">
+                    <option value=""> ~ select</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapura">Singapura</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Indonasia">Indonasia</option>
+                    <option value="India">India</option>
+                    <option value="England">England</option>
+                    <option value="United State">United State</option>
+                    <option value="Taiwan">Taiwan</option>
+                </select><br /><br />
+                <label>Account Type :</label><br />
+                <input type="checkbox" name="host" class="host" /><p> Host</p>
+                <input type="checkbox" name="user" class="user" style="margin-left: 40px;" /><p> User</p>
+            </form>
+        </div>
+    </div>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

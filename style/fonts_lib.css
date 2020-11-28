@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: External_font_SHOWG;
+    src: url('fonts/SHOWG.TTF') format('tff');
+}
+
+@font-face {
+    font-family: 'BlackMelody';
+    src: url('fonts/Black Melody.otf') format('opentype');
+}
+
+@font-face {
+    font-family: External_font_Champagne;
+    src: url('fonts/champagne.woff') format('woff2'), 
+    url('fonts/champagne.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'little_malleregular';
+    src: url('fonts/little_malle-webfont.woff2') format('woff2'),
+         url('fonts/little_malle-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lovely_valentineregular';
+    src: url('fonts/lovely_valentine_free-webfont.woff2') format('woff2'),
+         url('fonts/lovely_valentine_free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'malvieregular';
+    src: url('fonts/malvie-webfont.woff2') format('woff2'),
+         url('fonts/malvie-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raphtalia_personal_use_onlyRg';
+    src: url('fonts/raphtalia_personal_use_only-webfont.woff2') format('woff2'),
+         url('fonts/raphtalia_personal_use_only-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raphtalia_personal_use_onlyRg';
+    src: url('fonts/raphtalia_personal_use_only-webfont.woff2') format('woff2'),
+         url('fonts/raphtalia_personal_use_only-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'the_heart_chakraregular';
+    src: url('fonts/the_heart_chakra_-_ttf-webfont.woff2') format('woff2'),
+         url('fonts/the_heart_chakra_-_ttf-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tulip_feverregular';
+    src: url('fonts/tulipfever-webfont.woff2') format('woff2'),
+         url('fonts/tulipfever-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tulip_feverbold';
+    src: url('fonts/tulipfever-bold-webfont.woff2') format('woff2'),
+         url('fonts/tulipfever-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'wonderiaregular';
+    src: url('fonts/wonderia_font_d__by_7ntypes-webfont.woff2') format('woff2'),
+         url('fonts/wonderia_font_d__by_7ntypes-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'beattingvileregular';
+    src: url('fonts/beattingvile-webfont.woff2') format('woff2'),
+         url('fonts/beattingvile-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'calligram_personalregular';
+    src: url('fonts/calligrampersonal-webfont.woff2') format('woff2'),
+         url('fonts/calligrampersonal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dapplegrim_demoregular';
+    src: url('fonts/dapplegrim_demo-webfont.woff2') format('woff2'),
+         url('fonts/dapplegrim_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dearponypersonaluseregular';
+    src: url('fonts/dearponypersonaluse-webfont.woff2') format('woff2'),
+         url('fonts/dearponypersonaluse-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dearponypersonalusebold';
+    src: url('fonts/dearponypersonaluse-bold-webfont.woff2') format('woff2'),
+         url('fonts/dearponypersonaluse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dearponypersonaluseheavy';
+    src: url('fonts/dearponypersonaluse-heavy-webfont.woff2') format('woff2'),
+         url('fonts/dearponypersonaluse-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dearponypersonalusemedium';
+    src: url('fonts/dearponypersonaluse-medium-webfont.woff2') format('woff2'),
+         url('fonts/dearponypersonaluse-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jackniferegular';
+    src: url('fonts/jacknife-webfont.woff2') format('woff2'),
+         url('fonts/jacknife-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Wood_title';
+    src: url('fonts/MISTV___.TTF');
+    font-weight: normal;
+    font-style: normal;
+
+}

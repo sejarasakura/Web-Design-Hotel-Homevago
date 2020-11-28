@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html class="wood">
+
+<!--
+ New Perspectives on HTML5 and CSS3, 7th Edition
+Semester assginment
+ Review Assignment
+
+Homevago project
+ Author: 
+ Date:  
+
+ Filename: myAccount.html
+-->
+
+<head>
+    <title>My account</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="Hotel, Homevago, Home, Stay, Sleep, Host" />
+
+
+    <!--------------------------------- Javascript Sheet ---------------------------------->
+    <script src="../script/manage_account.js"></script>
+    <script src="../script/catogeries.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/user.js"></script>
+
+    <!-------------------------------------- Style Sheet ---------------------------------->
+    <link href="../style/fonts_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/according_menu.css" rel="stylesheet" type="text/css" />
+    <link href="../style/side.css" rel="stylesheet" type="text/css" />
+    <link href="../style/header.css" rel="stylesheet" type="text/css" />
+    <link href="../style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../style/icons_lib.css" rel="stylesheet" type="text/css" />
+    <link href="../style/my_setting.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../image/homevago.png" />
+</head>
+<body class="wood">
+    
+
+    <!------------------------------ Header of the page ----------------------------------->
+    <header>
+        <div class="upper_part_header">
+            <div class="left">
+                <a href="Home.html">
+                    <img src="../Image/logo.png" alt="Homevago" width="100%" height="100%" />
+                </a>
+            </div>
+            <div class="right" id="header_user_right_icon">
+                <a href="login.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Login</span></a>
+                <a href="signup.html" class="user"><i class="fas fa-user"></i><span class="word_login_and_sign_up"> Sign Up</span></a>
+            </div>
+            <div class="right" id="header_user_right_pic">
+                    <a href="mySetting.html">
+                        <div class="pic_content_user">
+                            <script>set_user_picture();</script>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li style="border-left: 1px solid #fff;"><a href="Home.html"><span class="icon-page-home"> </span>Home</a></li>
+                <li><a href="catergory.html"><span class="icon-catergory"></span> Categories</a></li>
+                <li><a href="promotion.html"><span class="icon-promotion"></span> Promotion</a></li>
+                <li><a href="notification.html"><span class="icon-notification"></span> Notification(s)</a></li>
+                <script>write_setting_li(true);</script>
+            </ul>
+        </nav>
+        <script> re_right(); </script>
+    </header>
+
+
+
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    <div class="content" style="display:flex">
+        
+    <!-------------------------------------------- side navigation bar  ---------------------------------------->
+        <div class="according_container">
+            <div class="side_according">
+                <div class="menu">
+                    <li class="item">
+                        <a href="myAccount.html" class="btn">
+                            <span class="icon-wishlist"></span> My wish list
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myBooking.html" class="btn">
+                            <span class="icon-booking"></span> My booking
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="myStatus.html" class="btn">
+                            <span class="icon-status"></span> Status
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="mySetting.html" class="btn btn_according_active">
+                            <span class="icon-settings-gears"></span> Setting
+                        </a>
+                    </li>
+                    <li class="item" id="reviews_menu">
+                        <a href="#reviews_menu" class="btn">
+                            <span class="icon-reveiw"></span> My Reviews
+                        </a>
+                        <div class="smenu">
+                            <a href="myRating.html">Rating and discription</a>
+                            <a href="myComplant.html">Complants</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="login.html" class="btn" onclick="logout();">
+                            <span class="icon-logout"></span> Log Out
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            var current_user_data = get_user(-1);
+
+            function display_hidden(display_item)
+            {
+                rese_all_the_hidden_item();
+                var show_item = document.getElementById(display_item);
+                show_item.style.display = "table-row";
+            }
+            function rese_all_the_hidden_item()
+            {
+                var all_hidden_item = document.getElementsByClassName("hidden_app");
+                for(let i = 0; i < all_hidden_item.length; i++)
+                {
+                    all_hidden_item[i].style.display = "none";
+                }
+            }
+        </script>
+        <div class="realcontent">
+            <div class="header_setting">
+                <div class="setting_block">
+                    <h1 class="setting_header"><span class="icon-settings-gears"></span> Setting</h1>
+                </div>
+            </div>
+            <div class="realcontent_upPart">
+                <div class="setting_left">
+                    <div class="left_setting_fix">
+                        <div class="table_container_setting">
+                            <table class="settingT">
+                                
+                                <colgroup>
+                                    <col class="lable_table" />
+                                    <col class="semi_comal_table" />
+                                    <col class="value_table" />
+                                    <col class="edit_table" />
+                                </colgroup>
+                    
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[0]);</script></td>
+                                        <td><a href="#" title="Edit name" onclick="display_hidden('edit_name');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_name">
+                                        <td colspan="4">
+                                            <div class="from_container">
+                                                <form action="" method="post" class="setting_form">
+                                                    <fieldset>
+                                                        <legend>Edit Name</legend>
+                                                        <label for="name">Please enter new name: </label>
+                                                        <input class="brown-buttton" type="text" name="name" placeholder="Name" required/>
+                                                        
+                                                        <div class="submit_or_cancle">
+                                                            <input type="button" value="cancel" class="brown-buttton float-left">
+                                                            <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                        </div>
+                                                        
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Username</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[1]);</script></td>
+                                        <td><a href="#" title="Edit username" onclick="display_hidden('edit_username');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_username">
+                                        <td colspan="4">
+                                            <div class="from_container">
+                                                <form action="" method="post" class="setting_form">
+                                                    <fieldset>
+                                                        <legend>Edit Username</legend>
+                                                        <label for="username">Please enter new username: </label>
+                                                        <input class="brown-buttton" type="text" name="username" placeholder="Username" required/>
+                                                        
+                                                        <div class="submit_or_cancle">
+                                                            <input type="button" value="cancel" class="brown-buttton float-left">
+                                                            <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                        </div>
+                                                        
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        
+
+                                    <tr>
+                                        <td>Contect Number</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[2]);</script></td>
+                                        <td><a href="#" title="Edit contact Number" onclick="display_hidden('edit_contact');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_contact">
+                                        <td colspan="4">
+                                                <div class="from_container">
+                                                    <form action="" method="post" class="setting_form">
+                                                        <fieldset>
+                                                            <legend>Edit Contact Number</legend>
+                                                            <label for="phone">Update the mobile number: </label>
+                                                            <input class="brown-buttton" type="tel" name="phone" placeholder="Phone Number" required/>
+                                                        
+                                                            <div class="submit_or_cancle">
+                                                                <input type="button" value="cancel" class="brown-buttton float-left">
+                                                                <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                            </div>
+                                                            
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>E-mail</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[3]);</script></td>
+                                        <td><a href="#" title="Edit e-mail address" onclick="display_hidden('edit_email');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_email">
+                                        <td colspan="4"> 
+                                            <div class="from_container">
+                                                <form action="" method="post" class="setting_form">
+                                                    <fieldset>
+                                                        <legend>Edit E-mail</legend>
+                                                        <label for="email">Update the Email Address: </label>
+                                                        <input class="brown-buttton" type="email" name="email" placeholder="{Email Address}" required/>
+                                                        
+                                                        <div class="submit_or_cancle">
+                                                            <input type="button" value="cancel" class="brown-buttton float-left">
+                                                            <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                        </div>
+                                                        
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        
+                                    
+                                    <tr>
+                                        <td>Bankcard number</td>
+                                        <td>:</td>
+                                        <td><script>
+                                            document.write(current_user_data[4].substring(0 , 4) + " ");
+                                            document.write(current_user_data[4].substring(4 , 8) + " ");
+                                            document.write(current_user_data[4].substring(8 , 12) + " ");
+                                            document.write(current_user_data[4].substring(12 , 16));
+                                        </script></td>
+                                        <td><a href="#" title="Edit bankcard number" onclick="display_hidden('edit_bankcard');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_bankcard">
+                                        <td colspan="4">
+                                            <div class="from_container">
+                                                <form action="" method="post" class="setting_form">
+                                                    <fieldset>
+                                                        <legend>Edit Card Number</legend>
+                                                        <label for="bank_number">Update bankcard number: </label>
+                                                        <input class="brown-buttton" type="text" name="bank_number" placeholder="Credit or Debit card numbe" required/>
+                                                        
+                                                        <div class="submit_or_cancle">
+                                                            <input type="button" value="cancel" class="brown-buttton float-left">
+                                                            <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                        </div>
+                                                        
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    
+                                    <tr>
+                                        <td>Address</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[5]);</script></td>
+                                        <td><a href="#" title="Edit Home address" onclick="display_hidden('edit_address');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_address">
+                                        <td colspan="4">
+                                                <div class="from_container">
+                                                    <form action="" method="post" class="setting_form">
+                                                        <fieldset>
+                                                            <legend>Edit current address</legend>
+                                                            <label for="Home_address">Update the Email Address: </label>
+                                                            <input class="brown-buttton" type="text" name="Home_address" placeholder="Home Address" required/>
+                                                        
+                                                            <div class="submit_or_cancle">
+                                                                <input type="button" value="cancel" class="brown-buttton float-left">
+                                                                <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                            </div>
+                                                            
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                        
+                                        
+                                        
+                                    <tr>
+                                        <td>Contry</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[6]);</script></td>
+                                        <td><a href="#" title="Edit current country" onclick="display_hidden('edit_contry');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_contry">
+                                        <td colspan="4">
+                                            <div class="from_container">
+                                                <form action="" method="post" class="setting_form">
+                                                    <fieldset>
+                                                        <legend>Edit current country</legend>
+                                                        <label for="country">Update the Country you stay: </label>
+                                                        <select class="brown-buttton"  name="country" id="form_country" required>
+                                                                <option value=""> ~ select</option>
+                                                                <option value="Malaysia">Malaysia</option>
+                                                                <option value="Singapura">Singapura</option>
+                                                                <option value="Thailand">Thailand</option>
+                                                                <option value="Japan">Japan</option>
+                                                                <option value="China">China</option>
+                                                                <option value="Japan">Japan</option>
+                                                                <option value="Indonasia">Indonasia</option>
+                                                                <option value="India">India</option>
+                                                                <option value="England">England</option>
+                                                                <option value="United State">United State</option>
+                                                                <option value="Taiwan">Taiwan</option>
+                                                        </select>
+                                                        
+                                                        <div class="submit_or_cancle">
+                                                            <input type="button" value="cancel" class="brown-buttton float-left">
+                                                            <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                        </div>
+                                                        
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        
+                                        
+
+
+                                        
+                                    <tr>
+                                        <td>Brithday</td>
+                                        <td>:</td>
+                                        <td><script>document.write(current_user_data[8]);</script></td>
+                                        <td><a href="#" title="Edit e-mail address" onclick="display_hidden('edit_birth');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_birth">
+                                        <td colspan="4">
+                                                <div class="from_container">
+                                                    <form action="" method="post" class="setting_form">
+                                                        <fieldset>
+                                                            <legend>Edit birthday</legend>
+                                                            <label for="birthday">Update the Birthday date: </label>
+                                                            <input class="brown-buttton" type="date" name="birthday" placeholder="Birthday" required/>
+                                                        
+                                                            <div class="submit_or_cancle">
+                                                                <input type="button" value="cancel" class="brown-buttton float-left">
+                                                                <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                            </div>
+                                                            
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                            
+                                    <tr>
+                                        <td>Password</td>
+                                        <td>:</td>
+                                        <td>******************</td>
+                                        <td><a href="#" title="Edit e-mail address" onclick="display_hidden('edit_password');">edit</a></td>
+                                    </tr>
+                                    <tr class="hidden_app" id="edit_password">
+                                        <td colspan="4">
+                                            <div class="from_container">
+                                                <form action="" method="post" class="setting_form">
+                                                    <fieldset>
+                                                        <legend>Edit birthday</legend>
+                                                        <label for="password">Enter the old password : </label>
+                                                        <input class="brown-buttton" type="password" name="password" placeholder="Old password" required/>
+                                                        <label for="new_password">Enter the new password: </label>
+                                                        <input class="brown-buttton" type="password" name="new_password" placeholder="New password" required />
+                                                        
+                                                        <div class="submit_or_cancle">
+                                                            <input type="button" value="cancel" class="brown-buttton float-left">
+                                                            <input type="submit" value="Confirm" class="brown-buttton float-right">
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+                </div>
+                <div class="setting_right">
+                    <div class="right_setting_fix">
+                        <div class="user_img_content">
+                            <script>
+                                set_user_picture();
+                            </script>
+                        </div>
+                        <div style="margin: 40px auto; height: 30px; width: 90px;">
+                            <button class="change_pic_btn" id="btnfile">
+                                Change Pic
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        rese_all_the_hidden_item();
+    </script>
+    <!-------------------------------------------- CONTENT  ---------------------------------------->
+    <!---------------------------------------------------------------------------------------------->
+    
+    <!--------------------------------------------- Side Icon -------------------------------------->
+
+    <div class="icons">
+        <a href="forum.html" class="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="helps.html" class="help"><i class="fas fa-info-circle"></i> Helps</a>
+        <a href="contact_us.html" class="findUs"><i class="fas fa-headset"></i> Find us</a>
+    </div>
+
+    <!----------------------------------------- Footer of the page --------------------------------->
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="information short">
+                <p>Why host</p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p>Careers</p>
+                <p>Policy</p>
+            </div>
+            <div class="information short">
+                <p>User</p>
+                <p>Private Policy</p>
+                <p>Need Help</p>
+                <p>Terms of use</p>
+            </div>
+            <div class="information long">
+                <p>Contact Info</p>
+                <p>53300 setapak, Kuala Lumpur</p>
+                <p>Malaysia</p>
+                <p>Phone : (011) - 000 - 0000</p>
+                <p>Email : servicehomevago@yahoo.com</p>
+                <p>Web   : www.homevago.com</p>
+            </div>
+            <hr class="vertical" />
+            <div class="footer_box">
+                <div class="footer_image_box">
+                    <img src="../Image/logo_black.png" alt="Homevago" width="100%" height="100%"/>
+                </div>
+                <div class="share_social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/najib">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/najibrazak">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/110555361869973167886">
+                                <span class="icon-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/najibrazak/">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/najib_razak/">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="height: 80px;">
+                <p>&#169; Copyright 1980 - 2020</p>
+                <p>All right reserved</p>
+                <p>Private Policy</p>
+                <p>Homevago Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

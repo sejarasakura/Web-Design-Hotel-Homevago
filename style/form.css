@@ -1,0 +1,114 @@
+
+@charset "utf-8";
+
+/*sign up */
+
+div.register {
+    width: 45.85174203%;
+    height: 800px;
+    padding: 0px 10% 0px 10%;
+    background-image: url("../Image/sign_up/background.jpg");
+    float: right;
+}
+div.agreement {
+    width: 28%;
+    height: 800px;
+    padding: 0px 3% 0px 3%;
+    background-image: radial-gradient(#999, #fff);
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+div.agreement h1{
+    font-size: 50px;
+}
+div.agreement h3, div.agreement h1{
+    font-family: 'dapplegrim_demoregular';
+    color: rgb(60, 42, 6);
+    text-align: center;
+    margin: 10px;
+}
+div.agreement ol {
+    color: #581d20;
+}
+div.agreement ol li{
+    font-family: 'wonderiaregular';
+    font-size: 20px;
+}
+div.sign_up_vertical {
+    width: 0.1482579689%;
+    height: 800px;
+    float: left;
+    background-color: #224424;
+}
+div.register form.register_from {
+
+}
+div.sign_up_content {
+    height: 800px;
+    display: block;
+}
+div.register form.register_from h2{
+    font-family: 'the_heart_chakraregular';
+    font-size: 40px;
+    text-align: center;
+    color: #eee;
+}
+div.register form.register_from input {
+height: auto;
+width: 45%;
+background-color: #22222299;
+border-color: #111111dd;
+color: #fff;
+padding: 5px 5px 5px 15px;
+border-radius: 15px;
+}
+div.register form.register_from input.gender {
+    height: 15px;
+    width: 20%;
+    float: left;
+}
+div.genderbox {
+    height: 26px;
+    width: 22.5%;
+    float: left;
+}
+div.genderbox p {
+    float: left;
+}
+div.register form.register_from label {
+    font-size: 20px;
+    color: #ffffdd;
+    margin-left: 10px;
+    text-align: left;
+    width: 45%;
+}
+div.register form.register_from select.select_phone, div.register form.register_from select.select_contry {
+    height: auto;
+    background-color: #22222299;
+    border-color: #111111dd;
+    color: #fff;
+    padding: 5px 5px 5px 15px;
+    border-radius: 15px;
+    border-width: 2px;
+}
+div.register form.register_from input.host, div.register form.register_from input.user, div.register form.register_from p {
+    height: 20px;
+    float: left;
+    font-size: 20px;
+    width: 10%
+}
+div.register form.register_from div.submit_box {
+    height: 180px;
+    width: 250px;
+    float: right;
+}
+div.register form.register_from div.submit_box input {
+    height: 60px;
+    width: 60%;
+    margin: 3% 19% 3% 19%;
+    padding: 3px 15px 3px 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 25px;
+}

@@ -1,0 +1,96 @@
+﻿@charset "utf-8";
+div.login_content{
+    background-image: url("../Image/sign_up/login_background_back.jpg");
+    margin: 0;
+    padding: 0;
+    font-family: "Monotserrat", sans-serif;
+    height: 700px;
+}
+
+div.login_content div.container{
+    width: 360px;
+    height: 600px;
+    background-image: url("../Image/sign_up/login_bg.jpg");
+    position: absolute;
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    transform: translateX(-50%);
+    margin: 47px 0 47px 50%;
+}
+div.login_content div.container h1{
+    font-size: 40px;
+    margin-top: 125px;
+    margin-bottom: 60px;
+}
+.tbox{
+    width: 260px;
+    height: 40px;
+    background: #f1f1f1b3;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.tbox input{
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 90%;
+    line-height: 37px;
+    font-family: "Monotserrat", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+.btn {
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 14px auto;
+    display: block;
+    font-family: "Monotserrat", sans-serif;
+    font-size: 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    bottom: 3px;
+    position: absolute;
+    left: 50%;
+}
+.btn_login {
+    background: #3498db;
+    transform: translateX(30%);
+}
+.btn_cancle {
+    background: red;
+    transform: translateX(-130%);
+}
+form {
+    width: 330px;
+    height: 380px;
+}
+.b1{
+    display: block;
+    width: 260px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    margin: auto;
+    transition: 0.4s all;
+}
+.b2{
+    width: 260px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s all;
+}
+div.login_content div.container>a:hover{
+    background: #00000040;
+}
+div.image_container{
+    height: 90px;
+    width: 90px;
+    margin: 100px auto 50px auto;
+    border-radius: 50%;
+}
